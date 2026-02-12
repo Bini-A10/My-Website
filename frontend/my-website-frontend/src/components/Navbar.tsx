@@ -19,8 +19,8 @@ export function Navbar() {
             <div className="nav-links">
                 <a href="#home" className="nav-link active">Home</a>
                 <a href="#about" className="nav-link">About</a>
-                <a href="#gallery" className="nav-link">Gallery</a>
-                <a href="#features" className="nav-link">Features</a>
+                <a href="#portfolio" className="nav-link">Portfolio</a>
+                <a href="#blog" className="nav-link">Blog</a>
                 <a href="#contact" className="nav-link">Contact</a>
             </div>
 
