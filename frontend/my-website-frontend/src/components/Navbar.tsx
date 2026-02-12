@@ -2,28 +2,45 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Navbar() {
+    const pathname = usePathname();
+
+    const navLinks = [
+        { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
+        { name: 'Portfolio', href: '#portfolio' },
+        { name: 'Blog', href: '#blog' },
+        { name: 'Contact', href: '#contact' },
+    ];
+
     return (
         <nav className="navbar">
             <div className="logo">
-                <Image
-                    src="/images/logoo.png"
-                    alt="Logo"
-                    width={100}
-                    height={100}
-                    className="logo-img"
-                    priority
-                />
+                <Link href="/">
+                    <Image
+                        src="/images/logoo.png"
+                        alt="Logo"
+                        width={100}
+                        height={100}
+                        className="logo-img"
+                        priority
+                    />
+                </Link>
             </div>
             <div className="nav-links">
-                <a href="#home" className="nav-link active">Home</a>
-                <a href="#about" className="nav-link">About</a>
-                <a href="#portfolio" className="nav-link">Portfolio</a>
-                <a href="#blog" className="nav-link">Blog</a>
-                <a href="#contact" className="nav-link">Contact</a>
+                {navLinks.map((link) => (
+                    <Link
+                        key={link.name}
+                        href={link.href}
+                        className={`nav-link ${pathname === link.href ? 'active' : ''}`}
+                    >
+                        {link.name}
+                    </Link>
+                ))}
             </div>
-
 
             <style jsx>{`
                 .navbar {
@@ -50,6 +67,7 @@ export function Navbar() {
                     align-items: center;
                     min-width: 80px;
                     z-index: 10;
+                    cursor: pointer;
                 }
 
                 .logo-img {
@@ -90,19 +108,6 @@ export function Navbar() {
 
                 .nav-link:hover, .nav-link.active {
                     color: var(--color-text-primary);
-                }
-
-                .nav-extra {
-                  display: flex;
-                  gap: 1.5rem;
-                  color: var(--color-text-secondary);
-                  font-size: 1.2rem;
-                  align-items: center;
-                }
-
-                .menu-icon {
-                  font-weight: bold;
-                  letter-spacing: 2px;
                 }
 
                 @media (max-width: 1024px) {

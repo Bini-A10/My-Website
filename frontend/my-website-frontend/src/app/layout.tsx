@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
 // Elegant serif font for headings - matches dark luxury aesthetic
 const playfairDisplay = Playfair_Display({
@@ -26,7 +27,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
+  title: "Portfolio | Biniyam Alemayehu",
   description: "Personal portfolio showcasing projects and expertise",
 };
 
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${inter.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

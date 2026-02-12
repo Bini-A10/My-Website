@@ -2,12 +2,10 @@
 
 import { ParallaxPortrait } from './ParallaxPortrait';
 import { Button } from './Button';
-import { Navbar } from './Navbar';
 
 export function Hero() {
   return (
     <section className="hero-container">
-      <Navbar />
       <div className="hero-content">
 
         {/* Left side - Content */}
@@ -29,7 +27,7 @@ export function Hero() {
             </p>
           </div>
 
-          
+
         </div>
 
         {/* Right side - Portrait Area */}
