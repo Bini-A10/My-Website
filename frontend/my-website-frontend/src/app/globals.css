@@ -1,43 +1,8 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Ethnocentric';
-  src: url('/font/Ethnocentric-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'INFECTED';
-  src: url('/font/INFECTED.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CAMPUS PERSONAL USE';
-  src: url('/font/CAMPUS PERSONAL USE.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy-LightItalic';
-  src: url('/font/Gilroy-LightItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 /**
  * Global Design System - CSS Custom Properties
  * Dark Blood-Red Aesthetic for Personal Portfolio
- * 
- * All design tokens are defined as CSS variables for maximum reusability.
- * Never hard-code colors, fonts, or spacing values in components.
  */
 
 :root {
@@ -157,6 +122,9 @@
   --font-heading: var(--font-playfair);
   --font-body: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-special: var(--font-ethnocentric);
+  --font-cursive: var(--font-snowboarding);
+  --font-accent: var(--font-gilroy-black);
 
   /* Font Sizes */
   --font-size-h1: 3.5rem;
@@ -565,6 +533,21 @@ a:visited {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* ========================================
+   COMPONENT SPECIFIC OVERRIDES
+   ======================================== */
+
+.nav-link {
+  font-family: var(--font-infected), cursive !important;
+  color: var(--color-text-primary) !important;
+  font-weight: 900 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary) !important;
 }
 
 /* Prevent layout shift */

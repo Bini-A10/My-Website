@@ -54,7 +54,6 @@ export function Hero() {
 
         .hero-content {
           position: relative;
-          z-index: 2000;
           display: flex;
           flex: 1;
           align-items: center;
@@ -84,6 +83,7 @@ export function Hero() {
           flex-direction: column;
           gap: 1.5rem;
           max-width: 700px;
+          z-index: 10; /* Above bg text but below navbar */
         }
 
         .hero-title {
@@ -180,6 +180,8 @@ export function Hero() {
           display: flex;
           align-items: center;
           justify-content: flex-end;
+          z-index: 6000; /* Overlaps Navbar */
+          pointer-events: none; /* Let clicks pass through to Navbar */
         }
 
         @media (max-width: 1200px) {

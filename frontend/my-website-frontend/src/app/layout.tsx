@@ -1,9 +1,35 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
-// Elegant serif font for headings - matches dark luxury aesthetic
+// Local fonts
+const snowboarding = localFont({
+  src: "../../public/font/Snowboarding.ttf",
+  variable: "--font-snowboarding",
+  display: "swap",
+});
+
+const ethnocentric = localFont({
+  src: "../../public/font/Ethnocentric-Regular.otf",
+  variable: "--font-ethnocentric",
+  display: "swap",
+});
+
+const gilroyBlack = localFont({
+  src: "../../public/font/Gilroy-Black.ttf",
+  variable: "--font-gilroy-black",
+  display: "swap",
+});
+
+const infected = localFont({
+  src: "../../public/font/INFECTED.ttf",
+  variable: "--font-infected",
+  display: "swap",
+});
+
+// Elegant serif font for headings
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
@@ -39,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${inter.variable} ${geistMono.variable} ${snowboarding.variable} ${ethnocentric.variable} ${gilroyBlack.variable} ${infected.variable} antialiased`}
       >
         <Navbar />
         {children}

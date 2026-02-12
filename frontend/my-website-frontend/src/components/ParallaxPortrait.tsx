@@ -85,9 +85,8 @@ export function ParallaxPortrait() {
         }
 
         .portrait-image {
-          width: auto;
+          width: 75%;
           height: auto;
-          max-width: 75%;
           max-height: 58vh;
           object-fit: contain;
           filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.8));

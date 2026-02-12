@@ -53,7 +53,7 @@ export function Navbar() {
                     display: flex;
                     align-items: center;
                     padding: 0.4rem 2rem;
-                    z-index: 1000;
+                    z-index: 5000;
                     background: rgba(0, 0, 0, 0.15);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
@@ -97,17 +97,17 @@ export function Navbar() {
                 }
 
                 .nav-link {
-                    font-family: var(--font-body);
+                    font-family: var(--font-cursive), cursive !important;
                     font-size: 1.05rem; /* Increased size */
-                    color: var(--color-text-secondary);
+                    color: var(--color-text-primary);
                     text-decoration: none;
                     transition: all var(--transition-base);
-                    font-weight: 500;
+                    font-weight: normal;
                     letter-spacing: 0.5px;
                 }
 
                 .nav-link:hover, .nav-link.active {
-                    color: var(--color-text-primary);
+                    color: var(--color-primary);
                 }
 
                 @media (max-width: 1024px) {
