@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Playfair Display, serif" font-weight="900" font-size="45" fill="#FF003C" filter="url(#glow)">DN.</text>
+  <rect x="5" y="5" width="90" height="90" rx="10" stroke="#FF003C" stroke-width="3" opacity="0.3"/>
+  <path d="M5 25 L5 15 Q5 5 15 5 L25 5" stroke="#FF003C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M75 5 L85 5 Q95 5 95 15 L95 25" stroke="#FF003C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M95 75 L95 85 Q95 95 85 95 L75 95" stroke="#FF003C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M25 95 L15 95 Q5 95 5 85 L5 75" stroke="#FF003C" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

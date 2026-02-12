@@ -1,253 +1,225 @@
 'use client';
 
-import React from 'react';
-import { TechBackground } from './TechBackground';
 import { ParallaxPortrait } from './ParallaxPortrait';
 import { Button } from './Button';
+import { Navbar } from './Navbar';
 
 export function Hero() {
-    return (
-        <section className="hero-container">
-            {/* Technical background layer */}
-            <TechBackground />
+  return (
+    <section className="hero-container">
+      <Navbar />
+      <div className="hero-content">
 
-            {/* Main content */}
-            <div className="hero-content">
-                {/* Left side - Text content */}
-                <div className="hero-text">
-                    <div className="hero-badge">
-                        <span className="badge-dot" />
-                        <span className="badge-text">Available for opportunities</span>
-                    </div>
+        {/* Left side - Content */}
+        <div className="hero-main">
 
-                    <h1 className="hero-title">
-                        Hi, I'm{' '}
-                        <span className="hero-name">Biniyam Alemayehu</span>
-                    </h1>
 
-                    <h2 className="hero-role">Full-Stack Developer</h2>
+          <h1 className="hero-title">
+            <span className="hero-greeting">Hi, I'm</span>
+            <span className="hero-name">Biniyam Alemayehu</span>
+          </h1>
 
-                    <p className="hero-bio">
-                        Full-Stack Developer with hands-on experience building scalable web
-                        and mobile applications. Strong in backend API development, database
-                        design, and modern frontend frameworks, with a focus on delivering
-                        clean, reliable, and user-friendly solutions.
-                    </p>
+          <div className="hero-description-container">
+            <div className="accent-line" />
+            <p className="hero-bio">
+              Full-Stack Developer specializing in scalable, production-grade web and mobile
+              applications. Experienced in designing robust backend architectures, optimized
+              databases, and modern frontend experiences with a strong focus on performance,
+              reliability, and long-term maintainability.
+            </p>
+          </div>
 
-                    <div className="hero-cta">
-                        <Button variant="primary" href="#projects">
-                            View Projects
-                        </Button>
-                        <Button variant="ghost" href="#contact">
-                            Contact Me
-                        </Button>
-                    </div>
-                </div>
+          
+        </div>
 
-                {/* Right side - Portrait */}
-                <div className="hero-portrait">
-                    <ParallaxPortrait />
-                </div>
-            </div>
+        {/* Right side - Portrait Area */}
+        <div className="hero-portrait-container">
+          <ParallaxPortrait />
 
-            <style jsx>{`
+        </div>
+      </div>
+
+      <style jsx>{`
         .hero-container {
           position: relative;
           min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: var(--spacing-8);
+          /* Sophisticated dark gradient overlay for better text contrast and premium feel */
+          background: 
+            linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.4)),
+            url('/images/BG.png') no-repeat center center;
+          background-size: cover;
           overflow: hidden;
-          background: var(--color-background);
+          padding: 6rem 4rem;
+          display: flex;
+          flex-direction: column;
         }
 
         .hero-content {
           position: relative;
-          z-index: 10;
-          max-width: 1400px;
-          width: 100%;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: var(--spacing-16);
+          z-index: 2000;
+          display: flex;
+          flex: 1;
           align-items: center;
+          gap: 8rem;
+          padding-top: 2rem;
+          justify-content: space-between;
         }
 
-        .hero-text {
+        .hero-bg-text {
+          position: absolute;
+          left: -2rem;
+          top: 45%;
+          transform: translateY(-50%);
+          font-size: 18vw;
+          font-weight: 900;
+          color: rgba(255, 255, 255, 0.02);
+          white-space: nowrap;
+          pointer-events: none;
+          z-index: -1;
+          text-transform: uppercase;
+          letter-spacing: -5px;
+        }
+
+        .hero-main {
+          flex: 1;
           display: flex;
           flex-direction: column;
-          gap: var(--spacing-6);
-        }
-
-        .hero-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: var(--spacing-2);
-          padding: var(--spacing-2) var(--spacing-4);
-          background: var(--color-surface);
-          border: 1px solid var(--color-border);
-          border-radius: var(--radius-full);
-          width: fit-content;
-          animation: fadeInUp 0.6s ease-out;
-        }
-
-        .badge-dot {
-          width: 8px;
-          height: 8px;
-          background: var(--color-primary);
-          border-radius: 50%;
-          animation: pulse-dot 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-dot {
-          0%, 100% {
-            opacity: 1;
-            box-shadow: 0 0 0 0 var(--color-primary);
-          }
-          50% {
-            opacity: 0.8;
-            box-shadow: 0 0 0 4px rgba(139, 30, 63, 0.3);
-          }
-        }
-
-        .badge-text {
-          font-family: var(--font-body);
-          font-size: var(--font-size-sm);
-          color: var(--color-text-secondary);
-          font-weight: var(--font-weight-medium);
+          gap: 1.5rem;
+          max-width: 700px;
         }
 
         .hero-title {
-          font-family: var(--font-heading);
-          font-size: var(--font-size-h1);
-          font-weight: var(--font-weight-extrabold);
-          line-height: var(--line-height-tight);
-          color: var(--color-text-primary);
+          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          line-height: 1;
+          font-family: var(--font-body);
+          font-weight: 900;
+          color: white;
           margin: 0;
-          animation: fadeInUp 0.6s ease-out 0.1s both;
+          letter-spacing: -2px;
+        }
+
+        .hero-greeting {
+           font-size: 0.4em;
+           font-weight: 400;
+           color: var(--color-text-secondary);
+           letter-spacing: 2px;
+           text-transform: uppercase;
+           display: block;
         }
 
         .hero-name {
-          background: linear-gradient(
-            135deg,
-            var(--color-primary-light) 0%,
-            var(--color-primary) 50%,
-            var(--color-primary-dark) 100%
-          );
+          font-family: 'Ethnocentric', cursive;
+          letter-spacing: normal;
+          display: block;
+          margin-top: 0.5rem;
+          background: linear-gradient(to right, white, var(--color-text-secondary));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          background-clip: text;
-          display: inline-block;
+          /* Ensure the name doesn't clip */
+          width: max-content;
+          max-width: 100%;
         }
 
-        .hero-role {
-          font-family: var(--font-heading);
-          font-size: var(--font-size-h3);
-          font-weight: var(--font-weight-semibold);
-          color: var(--color-text-accent);
-          margin: 0;
-          animation: fadeInUp 0.6s ease-out 0.2s both;
+        .hero-description-container {
+          display: flex;
+          gap: 2rem;
+          align-items: stretch;
+          margin-top: 0.25rem;
+        }
+
+        .accent-line {
+          width: 4px;
+          background: linear-gradient(to bottom, var(--color-primary), transparent);
+          flex-shrink: 0;
+          border-radius: 2px;
         }
 
         .hero-bio {
-          font-family: var(--font-body);
-          font-size: var(--font-size-lg);
-          line-height: var(--line-height-relaxed);
-          color: var(--color-text-secondary);
+          font-family: 'Gilroy-LightItalic', sans-serif;
+          font-size: 1.15rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.8);
           margin: 0;
-          max-width: 600px;
-          animation: fadeInUp 0.6s ease-out 0.3s both;
+          max-width: 520px;
+          font-weight: 500;
+          letter-spacing: 0.5px;
         }
 
         .hero-cta {
           display: flex;
-          gap: var(--spacing-4);
-          margin-top: var(--spacing-4);
-          animation: fadeInUp 0.6s ease-out 0.4s both;
+          gap: 1.25rem;
+          margin-top: 2rem;
+          align-items: center;
         }
 
-        .hero-portrait {
-          height: 600px;
-          animation: fadeIn 0.8s ease-out 0.2s both;
+        .cta-icon-btn {
+          width: 3.5rem;
+          height: 3.5rem;
+          background: var(--glass-bg);
+          backdrop-filter: var(--glass-blur);
+          border: 1px solid var(--glass-border);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: all var(--transition-base);
+          border-radius: var(--radius-base);
         }
 
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .cta-icon-btn:hover {
+          background: var(--color-primary);
+          border-color: var(--color-primary);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-glow);
         }
 
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
+        .hero-portrait-container {
+          flex: 1.5;
+          height: 75vh;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
         }
 
-        /* Responsive design */
+        @media (max-width: 1200px) {
+           .hero-title {
+              font-size: 4rem;
+           }
+        }
+
         @media (max-width: 1024px) {
+          .hero-container {
+            padding: 6rem 1.5rem 2rem 1.5rem;
+          }
           .hero-content {
-            grid-template-columns: 1fr;
-            gap: var(--spacing-12);
+            flex-direction: column;
             text-align: center;
+            justify-content: center;
+            gap: 2rem;
           }
-
-          .hero-text {
+          .hero-main {
             align-items: center;
-          }
-
-          .hero-bio {
             max-width: 100%;
           }
-
-          .hero-portrait {
-            height: 500px;
+          .accent-line {
+            display: none;
           }
-
-          .hero-title {
-            font-size: var(--font-size-h2);
+          .hero-description-container {
+            justify-content: center;
           }
-
-          .hero-role {
-            font-size: var(--font-size-h4);
+          .hero-portrait-container {
+             height: 450px;
+             width: 100%;
+             justify-content: center;
           }
-        }
-
-        @media (max-width: 768px) {
-          .hero-container {
-            padding: var(--spacing-4);
-          }
-
-          .hero-title {
-            font-size: var(--font-size-h3);
-          }
-
-          .hero-role {
-            font-size: var(--font-size-h5);
-          }
-
-          .hero-bio {
-            font-size: var(--font-size-base);
-          }
-
-          .hero-cta {
-            flex-direction: column;
-            width: 100%;
-          }
-
-          .hero-portrait {
-            height: 400px;
+          .hero-bg-text {
+            font-size: 25vw;
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 }
-

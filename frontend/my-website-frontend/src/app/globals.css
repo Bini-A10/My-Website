@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('/font/Ethnocentric-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'INFECTED';
+  src: url('/font/INFECTED.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CAMPUS PERSONAL USE';
+  src: url('/font/CAMPUS PERSONAL USE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-LightItalic';
+  src: url('/font/Gilroy-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /**
  * Global Design System - CSS Custom Properties
  * Dark Blood-Red Aesthetic for Personal Portfolio
@@ -14,85 +46,90 @@
      ======================================== */
 
   /* Primary - Dark Blood Red */
-  --color-primary: #8B1E3F;
-  --color-primary-light: #A63D5C;
-  --color-primary-dark: #6B1730;
-  --color-primary-muted: #5C1629;
+  --color-primary: #FF003C;
+  --color-primary-light: #FF4D7B;
+  --color-primary-dark: #B3002D;
+  --color-primary-muted: #66001A;
 
   /* Secondary - Deep Neutral Accent */
-  --color-secondary: #3C2F3D;
-  --color-secondary-light: #5A4A5C;
-  --color-secondary-dark: #2A1F2B;
-  --color-secondary-muted: #4A3D4B;
+  --color-secondary: #1A1A1A;
+  --color-secondary-light: #2A2A2A;
+  --color-secondary-dark: #0F0F0F;
+  --color-secondary-muted: #222222;
 
   /* Background Colors */
-  --color-background: #0A0A0A;
-  --color-background-elevated: #121212;
-  --color-background-overlay: #1A1A1A;
-  --color-background-subtle: #0F0F0F;
+  --color-background: #050505;
+  --color-background-elevated: #0D0D0D;
+  --color-background-overlay: rgba(5, 5, 5, 0.8);
+  --color-background-subtle: #080808;
 
   /* Surface Colors (Cards, Panels) */
-  --color-surface: #161616;
-  --color-surface-elevated: #1E1E1E;
-  --color-surface-sunken: #0D0D0D;
-  --color-surface-overlay: #1C1C1C;
+  --color-surface: #0F0F0F;
+  --color-surface-elevated: #161616;
+  --color-surface-sunken: #020202;
+  --color-surface-overlay: rgba(15, 15, 15, 0.9);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(15, 15, 15, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-blur: blur(12px);
 
   /* Text Colors */
-  --color-text-primary: #E8E8E8;
-  --color-text-secondary: #B0B0B0;
-  --color-text-muted: #707070;
-  --color-text-disabled: #4A4A4A;
-  --color-text-inverse: #0A0A0A;
-  --color-text-accent: #A63D5C;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0A0A0;
+  --color-text-muted: #606060;
+  --color-text-disabled: #404040;
+  --color-text-inverse: #050505;
+  --color-text-accent: #FF003C;
 
   /* Button Colors */
-  --color-button-primary: #8B1E3F;
-  --color-button-primary-hover: #A63D5C;
-  --color-button-primary-active: #6B1730;
-  --color-button-primary-disabled: #3D1520;
+  --color-button-primary: #FF003C;
+  --color-button-primary-hover: #FF3366;
+  --color-button-primary-active: #CC0030;
+  --color-button-primary-disabled: #33000D;
 
-  --color-button-secondary: #3C2F3D;
-  --color-button-secondary-hover: #5A4A5C;
-  --color-button-secondary-active: #2A1F2B;
-  --color-button-secondary-disabled: #221A23;
+  --color-button-secondary: #FFFFFF;
+  --color-button-secondary-hover: #E0E0E0;
+  --color-button-secondary-active: #C0C0C0;
+  --color-button-secondary-disabled: #404040;
 
   --color-button-ghost: transparent;
-  --color-button-ghost-hover: rgba(139, 30, 63, 0.1);
-  --color-button-ghost-active: rgba(139, 30, 63, 0.2);
+  --color-button-ghost-hover: rgba(255, 255, 255, 0.05);
+  --color-button-ghost-active: rgba(255, 255, 255, 0.1);
 
   /* Link Colors */
-  --color-link: #A63D5C;
-  --color-link-hover: #C85577;
-  --color-link-visited: #8B3D5C;
-  --color-link-active: #8B1E3F;
+  --color-link: #FF003C;
+  --color-link-hover: #FF3366;
+  --color-link-visited: #B3002D;
+  --color-link-active: #FF003C;
 
   /* Border & Divider Colors */
-  --color-border: #2A2A2A;
-  --color-border-subtle: #1F1F1F;
-  --color-border-strong: #3A3A3A;
-  --color-border-accent: #8B1E3F;
-  --color-border-focus: #A63D5C;
+  --color-border: #1F1F1F;
+  --color-border-subtle: #141414;
+  --color-border-strong: #2F2F2F;
+  --color-border-accent: #FF003C;
+  --color-border-focus: #FF003C;
 
   /* Status Colors */
-  --color-success: #2D7A4F;
-  --color-success-light: #3A9B63;
-  --color-success-dark: #1F5A38;
-  --color-success-bg: #1A3A2A;
+  --color-success: #00FF9D;
+  --color-success-light: #66FFC2;
+  --color-success-dark: #00B36E;
+  --color-success-bg: #001A0F;
 
-  --color-warning: #D97706;
-  --color-warning-light: #F59E0B;
-  --color-warning-dark: #B45309;
-  --color-warning-bg: #2A1F0A;
+  --color-warning: #FFBF00;
+  --color-warning-light: #FFD666;
+  --color-warning-dark: #B38600;
+  --color-warning-bg: #1A1300;
 
-  --color-error: #DC2626;
-  --color-error-light: #EF4444;
-  --color-error-dark: #B91C1C;
-  --color-error-bg: #2A0F0F;
+  --color-error: #FF003C;
+  --color-error-light: #FF3366;
+  --color-error-dark: #B3002D;
+  --color-error-bg: #1A0006;
 
-  --color-info: #2563EB;
-  --color-info-light: #3B82F6;
-  --color-info-dark: #1D4ED8;
-  --color-info-bg: #0F1A2A;
+  --color-info: #00A3FF;
+  --color-info-light: #66C7FF;
+  --color-info-dark: #0072B3;
+  --color-info-bg: #00101A;
 
   /* Utility Colors */
   --color-white: #FFFFFF;
@@ -100,16 +137,16 @@
   --color-transparent: transparent;
 
   /* Gray Scale */
-  --color-gray-50: #F9F9F9;
-  --color-gray-100: #E8E8E8;
-  --color-gray-200: #D1D1D1;
-  --color-gray-300: #B0B0B0;
-  --color-gray-400: #8A8A8A;
-  --color-gray-500: #707070;
-  --color-gray-600: #5A5A5A;
-  --color-gray-700: #3A3A3A;
-  --color-gray-800: #2A2A2A;
-  --color-gray-900: #1A1A1A;
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F4F4F4;
+  --color-gray-200: #E6E6E6;
+  --color-gray-300: #D1D1D1;
+  --color-gray-400: #A3A3A3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
   --color-gray-950: #0A0A0A;
 
   /* ========================================
@@ -423,10 +460,28 @@ a:visited {
   box-shadow: var(--shadow-glow-strong);
 }
 
-/* Focus visible styles */
-:focus-visible {
-  outline: 2px solid var(--color-border-focus);
-  outline-offset: 2px;
+/* Glassmorphism utilities */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Specialized Text Shadows */
+.text-shadow-glow {
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+.text-shadow-strong {
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
 }
 
 /* Selection styles */

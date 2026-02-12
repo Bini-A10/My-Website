@@ -1,46 +1,58 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export function TechBackground() {
-    return (
-        <div className="tech-background">
-            {/* Animated grid pattern */}
-            <div className="grid-pattern" />
+  const [particles, setParticles] = useState<{ left: string; top: string; delay: string; duration: string }[]>([]);
 
-            {/* Floating particles */}
-            <div className="particles">
-                {Array.from({ length: 20 }).map((_, i) => (
-                    <div
-                        key={i}
-                        className="particle"
-                        style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 5}s`,
-                            animationDuration: `${15 + Math.random() * 10}s`,
-                        }}
-                    />
-                ))}
-            </div>
+  useEffect(() => {
+    const generatedParticles = Array.from({ length: 20 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: `${Math.random() * 5}s`,
+      duration: `${15 + Math.random() * 10}s`,
+    }));
+    setParticles(generatedParticles);
+  }, []);
 
-            {/* Subtle code snippets */}
-            <div className="code-overlay">
-                <pre className="code-snippet code-snippet-1">
-                    {`const developer = {
+  return (
+    <div className="tech-background">
+      {/* Animated grid pattern */}
+      <div className="grid-pattern" />
+
+      {/* Floating particles - only rendered on client */}
+      <div className="particles">
+        {particles.map((particle, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: particle.left,
+              top: particle.top,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Subtle code snippets */}
+      <div className="code-overlay">
+        <pre className="code-snippet code-snippet-1">
+          {`const developer = {
   name: "Biniyam",
   passion: "Building",
   focus: "Innovation"
 };`}
-                </pre>
-                <pre className="code-snippet code-snippet-2">
-                    {`function createSolution() {
+        </pre>
+        <pre className="code-snippet code-snippet-2">
+          {`function createSolution() {
   return clean && scalable;
 }`}
-                </pre>
-            </div>
+        </pre>
+      </div>
 
-            <style jsx>{`
+      <style jsx>{`
         .tech-background {
           position: absolute;
           inset: 0;
@@ -114,10 +126,15 @@ export function TechBackground() {
           font-family: var(--font-mono);
           font-size: var(--font-size-xs);
           color: var(--color-text-muted);
-          opacity: 0.08;
+          opacity: 0.15;
           line-height: var(--line-height-relaxed);
           margin: 0;
           white-space: pre;
+          padding: 1rem;
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(5px);
+          border-radius: 4px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .code-snippet-1 {
@@ -140,6 +157,6 @@ export function TechBackground() {
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }

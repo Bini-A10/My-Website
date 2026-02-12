@@ -1,187 +1,128 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
+/**
+ * StaticPortrait Component
+ * A premium, static portrait composition with an elegant red sun backdrop.
+ */
 export function ParallaxPortrait() {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  return (
+    <div className="portrait-container">
+      {/* Red Sun Background - Fixed and Elegant */}
+      <div className="red-sun" />
 
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            if (!containerRef.current) return;
+      {/* Background glow shadow - Static and Mood-setting */}
+      <div className="glow-circle" />
 
-            const rect = containerRef.current.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
+      {/* Portrait layer - Simplified Static Composition */}
+      <div className="portrait-layer">
+        <Image
+          src="/images/bini.png"
+          alt="Biniyam Alemayehu"
+          width={550}
+          height={550}
+          className="portrait-image"
+          priority
+        />
+      </div>
 
-            // Calculate relative position (-1 to 1)
-            const x = (e.clientX - centerX) / (rect.width / 2);
-            const y = (e.clientY - centerY) / (rect.height / 2);
-
-            setMousePosition({ x, y });
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
-
-    return (
-        <div ref={containerRef} className="parallax-container">
-            {/* Background glow effect */}
-            <div
-                className="glow-circle"
-                style={{
-                    transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`,
-                }}
-            />
-
-            {/* Logo layer - moves more */}
-            <div
-                className="logo-layer"
-                style={{
-                    transform: `translate(${mousePosition.x * 30}px, ${mousePosition.y * 30}px)`,
-                }}
-            >
-                <Image
-                    src="/logo.jpg"
-                    alt="BA Logo"
-                    width={150}
-                    height={150}
-                    className="logo-image"
-                    priority
-                />
-            </div>
-
-            {/* Portrait layer - moves less for depth */}
-            <div
-                className="portrait-layer"
-                style={{
-                    transform: `translate(${mousePosition.x * 15}px, ${mousePosition.y * 15}px)`,
-                }}
-            >
-                <Image
-                    src="/portrait.jpg"
-                    alt="Biniyam Alemayehu"
-                    width={500}
-                    height={600}
-                    className="portrait-image"
-                    priority
-                />
-            </div>
-
-            <style jsx>{`
-        .parallax-container {
+      <style jsx>{`
+        .portrait-container {
           position: relative;
           width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          perspective: 1000px;
+        }
+
+        .red-sun {
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background: var(--color-primary);
+          border-radius: 50%;
+          z-index: 1;
+          right: 2%;
+          top: 50%;
+          transform: translateY(-50%);
+          box-shadow: 0 0 80px rgba(255, 0, 60, 0.35);
+          /* Subtle static gradient for depth */
+          background: radial-gradient(circle at 30% 30%, var(--color-primary-light), var(--color-primary-dark));
         }
 
         .glow-circle {
           position: absolute;
-          width: 400px;
-          height: 400px;
+          width: 350px;
+          height: 350px;
           background: radial-gradient(
             circle,
-            var(--color-primary) 0%,
+            rgba(0, 0, 0, 0.8) 0%,
             transparent 70%
           );
-          opacity: 0.2;
+          opacity: 0.8;
           border-radius: 50%;
-          filter: blur(60px);
-          transition: transform var(--transition-slow);
-          z-index: 1;
-          animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.3;
-            transform: scale(1.1);
-          }
-        }
-
-        .logo-layer {
-          position: absolute;
-          top: 10%;
-          left: 10%;
-          transition: transform var(--transition-slow);
-          z-index: 3;
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .logo-image {
-          width: 150px;
-          height: 150px;
-          object-fit: contain;
-          filter: drop-shadow(var(--shadow-glow));
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(5deg);
-          }
+          filter: blur(50px);
+          z-index: 2;
+          right: 0%;
+          top: 50%;
+          transform: translateY(-50%);
         }
 
         .portrait-layer {
           position: relative;
-          transition: transform var(--transition-slow);
-          z-index: 2;
+          z-index: 3;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          padding-top: 50rem;
+          padding-bottom: 0rem;
+          padding-right: 5%;
         }
 
         .portrait-image {
-          width: 100%;
-          max-width: 500px;
+          width: auto;
           height: auto;
-          border-radius: var(--radius-lg);
-          box-shadow: 
-            var(--shadow-xl),
-            var(--shadow-glow-strong);
-          border: 2px solid var(--color-border-subtle);
-          animation: breathe 4s ease-in-out infinite;
+          max-width: 75%;
+          max-height: 58vh;
+          object-fit: contain;
+          filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.8));
+          display: block;
         }
 
-        @keyframes breathe {
-          0%, 100% {
-            transform: scale(1);
+        @media (max-width: 1024px) {
+          .red-sun {
+            width: 380px;
+            height: 380px;
+            right: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
-          50% {
-            transform: scale(1.02);
+          .portrait-layer {
+            justify-content: center;
+            padding-right: 0;
+            padding-bottom: 0;
+          }
+          .portrait-image {
+            max-height: 50vh;
+          }
+          .glow-circle {
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
 
         @media (max-width: 768px) {
-          .portrait-image {
-            max-width: 350px;
-          }
-
-          .logo-layer {
-            top: 5%;
-            left: 5%;
-          }
-
-          .logo-image {
-            width: 100px;
-            height: 100px;
-          }
-
-          .glow-circle {
+          .red-sun {
             width: 300px;
             height: 300px;
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }
