@@ -133,7 +133,7 @@ export function Hero() {
         }
 
         .hero-bio {
-          font-family: 'Gilroy-LightItalic', sans-serif;
+          font-family: var(--font-gilroy-light-italic), sans-serif;
           font-size: 1.15rem;
           line-height: 1.6;
           color: rgba(255, 255, 255, 0.8);

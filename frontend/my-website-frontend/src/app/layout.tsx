@@ -23,6 +23,12 @@ const gilroyBlack = localFont({
   display: "swap",
 });
 
+const gilroyLightItalic = localFont({
+  src: "../../public/font/Gilroy-LightItalic.ttf",
+  variable: "--font-gilroy-light-italic",
+  display: "swap",
+});
+
 const infected = localFont({
   src: "../../public/font/INFECTED.ttf",
   variable: "--font-infected",
@@ -65,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${inter.variable} ${geistMono.variable} ${snowboarding.variable} ${ethnocentric.variable} ${gilroyBlack.variable} ${infected.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${inter.variable} ${geistMono.variable} ${snowboarding.variable} ${ethnocentric.variable} ${gilroyBlack.variable} ${gilroyLightItalic.variable} ${infected.variable} antialiased`}
       >
         <Navbar />
         {children}

@@ -97,17 +97,19 @@ export function Navbar() {
                 }
 
                 .nav-link {
-                    font-family: var(--font-cursive), cursive !important;
-                    font-size: 1.05rem; /* Increased size */
-                    color: var(--color-text-primary);
+                    font-family: 'Gilroy-Black', sans-serif !important;
+                    font-size: 1.15rem;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    color: #FFFFFF;
                     text-decoration: none;
                     transition: all var(--transition-base);
-                    font-weight: normal;
-                    letter-spacing: 0.5px;
                 }
 
                 .nav-link:hover, .nav-link.active {
                     color: var(--color-primary);
+                    text-shadow: 0 0 10px rgba(255, 0, 60, 0.3);
                 }
 
                 @media (max-width: 1024px) {

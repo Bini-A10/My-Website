@@ -539,16 +539,33 @@ a:visited {
    COMPONENT SPECIFIC OVERRIDES
    ======================================== */
 
-.nav-link {
-  font-family: var(--font-infected), cursive !important;
-  color: var(--color-text-primary) !important;
-  font-weight: 900 !important;
+/* Font-face declarations for Gilroy fonts */
+@font-face {
+  font-family: 'Gilroy-Black';
+  src: url('/font/Gilroy-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-primary) !important;
+@font-face {
+  font-family: 'Gilroy-LightItalic';
+  src: url('/font/Gilroy-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
+
+/* Force Gilroy-Black on navigation links */
+.navbar .nav-links .nav-link,
+a.nav-link {
+  font-family: 'Gilroy-Black', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  color: #FFFFFF !important;
+}
+
 
 /* Prevent layout shift */
 img {
