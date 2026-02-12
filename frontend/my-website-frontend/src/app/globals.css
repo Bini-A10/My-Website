@@ -566,6 +566,25 @@ a.nav-link {
   color: #FFFFFF !important;
 }
 
+/* Hover state */
+.navbar .nav-links .nav-link:hover,
+a.nav-link:hover {
+  color: #FF003C !important;
+  text-shadow: 0 0 15px rgba(255, 0, 60, 0.5) !important;
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/* Active/Click state */
+.navbar .nav-links .nav-link:active,
+a.nav-link:active,
+.navbar .nav-links .nav-link.active,
+a.nav-link.active {
+  color: #FF003C !important;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.7) !important;
+  transform: scale(0.98);
+}
+
 
 /* Prevent layout shift */
 img {
