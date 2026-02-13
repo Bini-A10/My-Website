@@ -33,11 +33,23 @@ export function AboutSection({
             <span className="about-greeting">{greeting}</span>
             <h2 className="about-name">{name}</h2>
             <div className="about-description-container">
-              {description.split('\n').map((line, index) => (
-                <p key={index} className="about-description">
-                  {line.trim()}
-                </p>
-              ))}
+              {description.split('\n').map((line, index) => {
+                const trimmedLine = line.trim();
+                const isBullet = trimmedLine.startsWith('✦') || trimmedLine.startsWith('•') || trimmedLine.startsWith('-');
+
+                return (
+                  <p key={index} className="about-description">
+                    {isBullet ? (
+                      <>
+                        <span className="bullet-point">{trimmedLine.charAt(0)}</span>
+                        {trimmedLine.substring(1)}
+                      </>
+                    ) : (
+                      trimmedLine
+                    )}
+                  </p>
+                );
+              })}
             </div>
             {ctaText && ctaHref && (
               <div className="about-cta">
@@ -71,7 +83,7 @@ export function AboutSection({
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 12rem 4rem;
+          padding: 5rem 4rem;
         }
 
         .about-section-content {
@@ -134,15 +146,15 @@ export function AboutSection({
         .about-greeting {
           color: var(--color-primary);
           font-family: 'Ethnocentric', sans-serif;
-          font-weight: 600;
+          font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 3px;
-          font-size: 0.9rem;
+          font-size: 1rem;
           opacity: 0.9;
         }
 
         .about-name {
-          font-family: 'Gilroy-Black', sans-serif;
+          font-family: 'Ethnocentric', sans-serif;
           font-size: clamp(2.5rem, 4vw, 3.5rem);
           font-weight: 900;
           color: white;
@@ -163,6 +175,15 @@ export function AboutSection({
           line-height: 1.7;
           color: rgba(255, 255, 255, 0.85);
           margin: 0;
+        }
+
+        .bullet-point {
+          color: var(--color-primary);
+          margin-right: 0.8rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+          vertical-align: middle;
+          line-height: 1;
         }
 
         .about-description:has(text:not(:empty)) {
