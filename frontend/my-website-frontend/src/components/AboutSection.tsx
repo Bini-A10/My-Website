@@ -47,8 +47,8 @@ export function AboutSection({
             <Image
               src={imageSrc}
               alt={imageAlt}
-              width={500}
-              height={600}
+              width={400}
+              height={300}
               className="about-portrait"
               priority
             />
@@ -63,7 +63,7 @@ export function AboutSection({
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 6rem 4rem;
+          padding: 10rem 4rem;
         }
 
         .about-section-content {
@@ -88,15 +88,15 @@ export function AboutSection({
 
         .about-greeting {
           color: var(--color-primary);
-          font-family: var(--font-body);
+          font-family: 'Ethnocentric', sans-serif;
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 2px;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
         }
 
         .about-name {
-          font-family: var(--font-heading);
+          font-family: 'Ethnocentric', sans-serif;
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight: 800;
           color: white;
@@ -105,10 +105,10 @@ export function AboutSection({
         }
 
         .about-description {
-          font-family: var(--font-body);
+          font-family: 'Gilroy-LightItalic', sans-serif;
           font-size: 1.1rem;
           line-height: 1.6;
-          color: var(--color-text-secondary);
+          color: var(--color-text-primary);
           max-width: 500px;
           margin: 0;
         }
@@ -124,17 +124,7 @@ export function AboutSection({
           align-items: center;
         }
 
-        .about-image-inner {
-          width: 100%;
-          max-width: 450px;
-          aspect-ratio: 4/5;
-          background: var(--color-surface-elevated);
-          border-radius: 40px;
-          overflow: hidden;
-          position: relative;
-          box-shadow: var(--shadow-xl);
-          border: 1px solid var(--glass-border);
-        }
+      
 
         .about-portrait {
           width: 100%;
