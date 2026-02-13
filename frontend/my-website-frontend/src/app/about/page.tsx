@@ -166,26 +166,24 @@ export default function AboutPage() {
         isReversed
       />
 
-      {/* Section 9: Default (Text Left, Image Right) */}
-      <AboutSection
-        greeting="My Work"
-        name="Professional Experience"
-        description="Currently, I work as a Software Developer at Hawi Software Solution, 
-          where I contribute to the development of enterprise-level web and mobile applications.
-          My responsibilities include:
-          - Designing scalable backend APIs and full-stack systems
-          - Optimizing databases and application performance
-          - Building mobile and web interfaces with modern frameworks
-          - Supporting production deployments using containerized environments
-          - Collaborating across multidisciplinary teams in agile workflows
-          Some measurable achievements include improving operational efficiency in transportation
-          systems, enhancing backend response times through query optimization, and developing 
-          business applications that streamline client workflows and communication.
-          Through these experiences, I have developed a strong understanding of real-world 
-          software requirements, stakeholder collaboration, and production system reliability."
-        imageSrc="/images/Vision.png"
-        imageAlt="Biniyam Alemayehu Vision"
-      />
+
+      {/* Section 9: Beyond Technology */}
+      <section className="beyond-tech-section">
+        <div className="beyond-tech-content">
+          <h2 className="beyond-tech-title">Beyond Technology</h2>
+          <div className="beyond-tech-paragraphs">
+            <p>
+              Outside of my professional work, I value community engagement, collaborative learning, and continuous self-improvement. I actively participate in technical discussions, contribute to student workshops when possible, and maintain a strong interest in initiatives that combine technology with positive social impact.
+            </p>
+            <p>
+              Beyond technology, I enjoy playing football, which helps me stay active, build teamwork skills, and maintain balance in my daily life. Regular exercise and sports are an important part of my routine, helping me stay focused, energized, and mentally sharp.
+            </p>
+            <p>
+              These experiences allow me to maintain a balanced perspective — combining technical excellence with human-centered problem solving while supporting both personal growth and professional productivity.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <style jsx>{`
         .about-page-container {
@@ -196,6 +194,70 @@ export default function AboutPage() {
             url('/images/BG.png') no-repeat center center fixed;
           background-size: cover;
           overflow-x: hidden;
+        }
+
+        .beyond-tech-section {
+          padding: 8rem 4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.2);
+          position: relative;
+          z-index: 10;
+        }
+
+        .beyond-tech-content {
+          max-width: 1000px;
+          width: 100%;
+        }
+
+        .beyond-tech-title {
+          font-family: 'Ethnocentric', sans-serif;
+          font-size: clamp(2rem, 4vw, 3.5rem);
+          color: var(--color-primary);
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .beyond-tech-paragraphs {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+        }
+
+        .beyond-tech-paragraphs p {
+          font-family: 'Gilroy-LightItalic', sans-serif;
+          font-size: 1.25rem;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.9);
+          margin: 0;
+          text-align: left;
+        }
+
+        @media (max-width: 1024px) {
+          .beyond-tech-section {
+            padding: 6rem 2rem;
+          }
+          .beyond-tech-title {
+            font-size: 2.5rem;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .beyond-tech-section {
+            padding: 4rem 1.5rem;
+          }
+          .beyond-tech-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+          }
+          .beyond-tech-paragraphs p {
+            font-size: 1.1rem;
+            text-align: center;
+          }
         }
       `}</style>
     </main>
