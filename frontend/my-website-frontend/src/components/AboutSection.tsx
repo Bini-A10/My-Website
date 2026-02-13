@@ -63,7 +63,7 @@ export function AboutSection({
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 10rem 4rem;
+          padding: 12rem 4rem;
         }
 
         .about-section-content {

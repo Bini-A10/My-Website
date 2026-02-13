@@ -23,8 +23,8 @@ export function Navbar() {
                     <Image
                         src="/images/logoo.png"
                         alt="Logo"
-                        width={100}
-                        height={100}
+                        width={120}
+                        height={120}
                         className="logo-img"
                         priority
                     />
@@ -71,12 +71,12 @@ export function Navbar() {
                 }
 
                 .logo-img {
-                    width: 100px; /* Increased from default */
-                    height: 100px;
+                    width: 120px; /* Increased for better visibility */
+                    height: 120px;
                     border-radius: 10px;
                     border: 2px solid var(--color-primary);
                     box-shadow: 0 0 25px rgba(255, 0, 60, 0.4);
-                    filter: brightness(1.2);
+                    filter: brightness(1.5);
                     transition: all var(--transition-base);
                     object-fit: contain;
                 }
