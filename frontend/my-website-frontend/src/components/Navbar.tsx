@@ -52,9 +52,10 @@ export function Navbar() {
                     max-width: 1200px;
                     display: flex;
                     align-items: center;
-                    padding: 0.4rem 2rem;
+                    height: 70px; 
+                    padding: 0 2rem;
                     z-index: 5000;
-                    background: rgba(0, 0, 0, 0.8);
+                    background: rgba(0, 0, 0, 1);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
                     border-radius: 12px;
