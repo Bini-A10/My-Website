@@ -11,8 +11,10 @@ export default function AboutPage() {
         name="Biniyam Alemayehu"
         description={`I am Biniyam Alemayehu, a passionate Full-Stack Developer dedicated to building scalable, efficient, and user-focused digital solutions. I specialize in transforming complex ideas into reliable software applications that combine strong performance, clean design, and practical real-world impact. My goal is not only to write code, but to create meaningful technology that solves problems and improves everyday experiences.
           With hands-on experience in both web and mobile development, I have worked on production-grade systems across transportation, education, and business sectors. I focus on writing maintainable code, optimizing backend performance, and ensuring smooth user experiences from database to interface.`}
-        imageSrc="/images/me.jpeg"
+        imageSrc="/images/Me.png"
         imageAlt="Biniyam Alemayehu"
+        imageWidth={400}
+        imageHeight={500}
       />
 
       {/* Section 2: Reversed (Image Left, Text Right) */}
@@ -30,6 +32,8 @@ export default function AboutPage() {
         imageSrc="/images/Edu.png"
         imageAlt="Biniyam Alemayehu Education"
         isReversed
+        imageWidth={450}
+        imageHeight={350}
       />
 
       {/* Section 3: Default (Text Left, Image Right) */}
@@ -45,6 +49,8 @@ export default function AboutPage() {
           Some measurable achievements include improving operational efficiency in transportation systems, enhancing backend response times through query optimization, and developing business applications that streamline client workflows and communication.Through these experiences, I have developed a strong understanding of real-world software requirements, stakeholder collaboration, and production system reliability.`}
         imageSrc="/images/work.png"
         imageAlt="Biniyam Alemayehu Vision"
+        imageWidth={400000}
+        imageHeight={300000}
       />
 
       {/* Section 4: Reversed (Image Left, Text Right) */}
@@ -74,6 +80,8 @@ export default function AboutPage() {
         imageSrc="/images/vision.png"
         imageAlt="Biniyam Alemayehu Vision"
         isReversed
+        imageWidth={400}
+        imageHeight={300}
       />
 
       {/* Section 5: Default (Text Left, Image Right) */}
@@ -88,8 +96,10 @@ export default function AboutPage() {
           ✦ Maintaining thorough documentation
           ✦ Encouraging collaboration and knowledge sharing
           This approach allows me to deliver solutions that are reliable, adaptable, and professionally sustainable.`}
-        imageSrc="/images/bini.png"
+        imageSrc="/images/approach.png"
         imageAlt="Biniyam Alemayehu Approach"
+        imageWidth={400}
+        imageHeight={300}
       />
 
       {/* Section 6: Reversed (Image Left, Text Right) */}
@@ -105,15 +115,19 @@ export default function AboutPage() {
         imageSrc="/images/vision.png"
         imageAlt="Biniyam Alemayehu Collaboration"
         isReversed
+        imageWidth={400}
+        imageHeight={300}
       />
 
       {/* Section 7: Default (Text Left, Image Right) */}
       <AboutSection
         greeting="Collaborative"
         name="Team Player"
-        description={`I excel in collaborative environments where clear communication and teamwork drive successful outcomes. Through close coordination with designers, stakeholders, and development teams, I help ensure that solutions remain aligned with business goals while maintaining strong technical and user-experience standards.`}
-        imageSrc="/images/binu1.png"
+        description={`I excel in collaborative environments where clear communication and teamwork drive successful outcomes. Through close coordination with designers, stakeholders, and development teams, I help ensure that solutions remain aligned with business goals while maintaining strong technical and user-experiences standards.`}
+        imageSrc="/images/team.png"
         imageAlt="Biniyam Alemayehu"
+        imageWidth={400}
+        imageHeight={300}
       />
 
       {/* Section 8: Reversed (Image Left, Text Right) */}
@@ -128,9 +142,11 @@ export default function AboutPage() {
           ✦ Expanding expertise in cloud architecture and distributed systems
           ✦ Building technology solutions that create positive social and economic impact
           I am committed to continuous professional development, staying updated with modern frameworks, software architecture trends, and emerging technologies.`}
-        imageSrc="/images/Edu.png"
+        imageSrc="/images/goal.png"
         imageAlt="Biniyam Alemayehu Education"
         isReversed
+        imageWidth={400}
+        imageHeight={300}
       />
 
 

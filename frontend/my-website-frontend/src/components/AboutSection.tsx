@@ -12,6 +12,8 @@ interface AboutSectionProps {
   imageSrc: string;
   imageAlt: string;
   isReversed?: boolean;
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
 export function AboutSection({
@@ -22,7 +24,9 @@ export function AboutSection({
   ctaHref,
   imageSrc,
   imageAlt,
-  isReversed = false
+  isReversed = false,
+  imageWidth = 400,
+  imageHeight = 300
 }: AboutSectionProps) {
   return (
     <section className={`about-section-container ${isReversed ? 'reversed' : ''}`}>
@@ -67,8 +71,8 @@ export function AboutSection({
             <Image
               src={imageSrc}
               alt={imageAlt}
-              width={400}
-              height={300}
+              width={imageWidth}
+              height={imageHeight}
               className="about-portrait"
               priority
             />
