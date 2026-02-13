@@ -9,9 +9,16 @@ export default function AboutPage() {
       <AboutSection
         greeting="Hello, Welcome"
         name="Biniyam Alemayehu"
-        description="I am a dedicated Full-Stack Developer with a passion for crafting 
-        seamless digital experiences. With a focus on performance, scalability, and modern 
-        design, I help turn complex ideas into functional, high-quality applications."
+        description="I am Biniyam Alemayehu, a passionate Full-Stack Developer dedicated to 
+         building scalable, efficient, and user-focused digital solutions. I specialize in 
+         transforming complex ideas into reliable software applications that combine strong
+         performance, clean design, and practical real-world impact. My goal is not only to 
+         write code, but to create meaningful technology that solves problems and improves 
+         everyday experiences.
+         With hands-on experience in both web and mobile development, 
+         I have worked on production-grade systems across transportation, education, and 
+         business sectors. I focus on writing maintainable code, optimizing backend 
+         performance, and ensuring smooth user experiences from database to interface."
         imageSrc="/images/binu1.png"
         imageAlt="Biniyam Alemayehu"
       />
@@ -19,10 +26,18 @@ export default function AboutPage() {
       {/* Section 2: Reversed (Image Left, Text Right) */}
       <AboutSection
         greeting="My Education"
-        name="Innovative Solutions"
-        description="I believe in building technology that isn't just functional, but also 
-        intuitive and impactful. By leveraging the latest tools and best practices, I create 
-        solutions that stand the test of time and provide real value to users."
+        name="Academic Foundation"
+        description="I earned my Bachelor of Science in Computer Science from Unity University
+        , graduating with honors and ranking among the top 10% of my class (GPA 3.74).
+          My academic experience provided a strong foundation in:
+          - Software engineering principles
+          - Database systems and optimization
+          - Object-oriented programming
+          - Mobile and web application development
+          - Systems analysis and architecture design
+          Beyond formal coursework, I actively engaged in collaborative development projects,
+          leadership roles, and technical problem-solving activities that helped shape my 
+          professional discipline and analytical thinking."
         imageSrc="/images/Edu.png"
         imageAlt="Biniyam Alemayehu Education"
         isReversed
@@ -30,22 +45,52 @@ export default function AboutPage() {
 
       {/* Section 3: Default (Text Left, Image Right) */}
       <AboutSection
-        greeting="My Vision"
-        name="Innovative Solutions"
-        description="I believe in building technology that isn't just functional, but also 
-        intuitive and impactful. By leveraging the latest tools and best practices, I create 
-        solutions that stand the test of time and provide real value to users."
+        greeting="My Work"
+        name="Professional Experience"
+        description="Currently, I work as a Software Developer at Hawi Software Solution, 
+          where I contribute to the development of enterprise-level web and mobile applications.
+          My responsibilities include:
+          - Designing scalable backend APIs and full-stack systems
+          - Optimizing databases and application performance
+          - Building mobile and web interfaces with modern frameworks
+          - Supporting production deployments using containerized environments
+          - Collaborating across multidisciplinary teams in agile workflows
+          Some measurable achievements include improving operational efficiency in transportation
+          systems, enhancing backend response times through query optimization, and developing 
+          business applications that streamline client workflows and communication.
+          Through these experiences, I have developed a strong understanding of real-world 
+          software requirements, stakeholder collaboration, and production system reliability."
         imageSrc="/images/Vision.png"
         imageAlt="Biniyam Alemayehu Vision"
       />
 
       {/* Section 4: Reversed (Image Left, Text Right) */}
       <AboutSection
-        greeting="My Work"
-        name="Innovative Solutions"
-        description="I believe in building technology that isn't just functional, but also 
-        intuitive and impactful. By leveraging the latest tools and best practices, I create 
-        solutions that stand the test of time and provide real value to users."
+        greeting="Skill"
+        name="Technical Expertise"
+        description="My technical skill set covers the full application lifecycle — from 
+        system architecture and backend logic to responsive user interface implementation. 
+        I focus on building scalable, maintainable applications with clean design, efficient 
+        performance, and strong usability.
+          Core Technologies
+          Backend:
+          Laravel, Spring Boot, REST API design and development
+          Frontend:
+          React (TypeScript), HTML5, CSS3, Bootstrap, responsive UI design, modern frontend architecture
+          Mobile Development:
+          Flutter
+          Desktop Applications:
+          JavaFX
+          Programming Languages
+          Java, PHP, TypeScript, Dart, C++
+          Databases & Infrastructure
+          MySQL, SQL Server, MongoDB, Docker containerization, Git version control
+          Professional Strengths
+          Performance optimization and scalable system architecture
+          Authentication systems and secure application design
+          Database modeling, indexing, and query optimization
+          Clean, maintainable code and technical documentation
+          Team collaboration, leadership, and agile workflow experience"
         imageSrc="/images/vision.png"
         imageAlt="Biniyam Alemayehu Vision"
         isReversed
@@ -55,23 +100,91 @@ export default function AboutPage() {
       <AboutSection
         greeting="My Approach"
         name="Quality First"
-        description="My development process is centered around writing clean, maintainable
-         code. I prioritize performance and security, ensuring that every application I build 
-         is robust and ready to handle growth and complexity."
+        description="My development philosophy centers on quality, clarity, and long-term 
+          maintainability. I believe strong software is built through thoughtful architecture,
+          disciplined coding standards, and continuous refinement.
+          Key principles I follow:
+          Writing clean, structured, and maintainable code
+          Prioritizing performance and scalability early
+          Designing with the user experience in mind
+          Maintaining thorough documentation
+          Encouraging collaboration and knowledge sharing
+          This approach allows me to deliver solutions that are reliable, adaptable, and 
+          professionally sustainable."
         imageSrc="/images/bini.png"
         imageAlt="Biniyam Alemayehu Approach"
       />
 
       {/* Section 6: Reversed (Image Left, Text Right) */}
       <AboutSection
-        greeting="Collaborative"
-        name="Team Player"
-        description="I thrive in environments that value collaboration and open communication.
-         Working closely with designers, stakeholders, and other developers, I ensure that the
-         final product aligns perfectly with the project goals."
-        imageSrc="/images/bini.png"
+        greeting="My Vision"
+        name="Innovative Solutions"
+        description="I aim to contribute to innovative technology solutions that empower 
+          businesses, educational platforms, and digital communities. I am particularly 
+          interested in developing systems that:
+          Improve operational efficiency
+          Enhance access to education and digital tools
+          Support emerging technology ecosystems
+          Solve practical problems with scalable solutions
+          Continuous learning and adaptability remain central to my growth as a developer, 
+          ensuring I stay aligned with evolving industry standards and technological
+          advancements."
+        imageSrc="/images/vision.png"
         imageAlt="Biniyam Alemayehu Collaboration"
         isReversed
+      />
+
+      {/* Section 7: Default (Text Left, Image Right) */}
+      <AboutSection
+        greeting="Collaborative"
+        name="Team Player"
+        description="I excel in collaborative environments where clear communication and 
+          teamwork drive successful outcomes. Through close coordination with designers,
+          stakeholders, and development teams, I help ensure that solutions remain aligned
+          with business goals while maintaining strong technical and user-experience standards."
+        imageSrc="/images/binu1.png"
+        imageAlt="Biniyam Alemayehu"
+      />
+
+      {/* Section 8: Reversed (Image Left, Text Right) */}
+      <AboutSection
+        greeting="Goals"
+        name="Future Direction"
+        description="Looking ahead, my career objective is to grow into a senior engineering
+          role where I can contribute not only as a developer but also as a technical leader 
+          and solution architect.
+          My long-term goals include:
+          Designing large-scale, high-impact software systems
+          Leading development teams and mentoring junior engineers
+          Contributing to innovative digital infrastructure projects
+          Expanding expertise in cloud architecture and distributed systems
+          Building technology solutions that create positive social and economic impact
+          I am committed to continuous professional development, staying updated with modern frameworks,
+          software architecture trends, and emerging technologies."
+        imageSrc="/images/Edu.png"
+        imageAlt="Biniyam Alemayehu Education"
+        isReversed
+      />
+
+      {/* Section 9: Default (Text Left, Image Right) */}
+      <AboutSection
+        greeting="My Work"
+        name="Professional Experience"
+        description="Currently, I work as a Software Developer at Hawi Software Solution, 
+          where I contribute to the development of enterprise-level web and mobile applications.
+          My responsibilities include:
+          - Designing scalable backend APIs and full-stack systems
+          - Optimizing databases and application performance
+          - Building mobile and web interfaces with modern frameworks
+          - Supporting production deployments using containerized environments
+          - Collaborating across multidisciplinary teams in agile workflows
+          Some measurable achievements include improving operational efficiency in transportation
+          systems, enhancing backend response times through query optimization, and developing 
+          business applications that streamline client workflows and communication.
+          Through these experiences, I have developed a strong understanding of real-world 
+          software requirements, stakeholder collaboration, and production system reliability."
+        imageSrc="/images/Vision.png"
+        imageAlt="Biniyam Alemayehu Vision"
       />
 
       <style jsx>{`
