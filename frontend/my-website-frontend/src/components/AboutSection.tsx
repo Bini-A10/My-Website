@@ -27,18 +27,26 @@ export function AboutSection({
   return (
     <section className={`about-section-container ${isReversed ? 'reversed' : ''}`}>
       <div className="about-section-content">
-        {/* Text Area */}
+        {/* Text Area (Card Format) */}
         <div className="about-section-text">
-          <span className="about-greeting">{greeting}</span>
-          <h2 className="about-name">{name}</h2>
-          <p className="about-description">{description}</p>
-          {ctaText && ctaHref && (
-            <div className="about-cta">
-              <Button href={ctaHref} variant="primary">
-                {ctaText}
-              </Button>
+          <div className="about-card">
+            <span className="about-greeting">{greeting}</span>
+            <h2 className="about-name">{name}</h2>
+            <div className="about-description-container">
+              {description.split('\n').map((line, index) => (
+                <p key={index} className="about-description">
+                  {line.trim()}
+                </p>
+              ))}
             </div>
-          )}
+            {ctaText && ctaHref && (
+              <div className="about-cta">
+                <Button href={ctaHref} variant="primary">
+                  {ctaText}
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Image Area */}
@@ -80,10 +88,47 @@ export function AboutSection({
         }
 
         .about-section-text {
-          flex: 1;
+          flex: 1.2;
           display: flex;
           flex-direction: column;
-          gap: 1.5rem;
+          z-index: 20;
+        }
+
+        .about-card {
+          background: rgba(15, 15, 15, 0.4);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 0, 60, 0.1);
+          border-radius: 2rem;
+          padding: 3.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          box-shadow: 
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            inset 0 0 20px rgba(255, 0, 60, 0.05);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .about-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+          opacity: 0.3;
+        }
+
+        .about-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(255, 0, 60, 0.3);
+          box-shadow: 
+            0 30px 60px rgba(0, 0, 0, 0.6),
+            inset 0 0 30px rgba(255, 0, 60, 0.1);
         }
 
         .about-greeting {
@@ -91,26 +136,37 @@ export function AboutSection({
           font-family: 'Ethnocentric', sans-serif;
           font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 2px;
-          font-size: 1.2rem;
+          letter-spacing: 3px;
+          font-size: 0.9rem;
+          opacity: 0.9;
         }
 
         .about-name {
-          font-family: 'Ethnocentric', sans-serif;
-          font-size: clamp(2.5rem, 5vw, 4rem);
-          font-weight: 800;
+          font-family: 'Gilroy-Black', sans-serif;
+          font-size: clamp(2.5rem, 4vw, 3.5rem);
+          font-weight: 900;
           color: white;
           margin: 0;
           line-height: 1.1;
+          text-transform: uppercase;
+        }
+
+        .about-description-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
         }
 
         .about-description {
           font-family: 'Gilroy-LightItalic', sans-serif;
-          font-size: 1.1rem;
-          line-height: 1.6;
-          color: var(--color-text-primary);
-          max-width: 500px;
+          font-size: 1.15rem;
+          line-height: 1.7;
+          color: rgba(255, 255, 255, 0.85);
           margin: 0;
+        }
+
+        .about-description:has(text:not(:empty)) {
+           /* Handle potential extra spacing from split if needed */
         }
 
         .about-cta {
@@ -145,7 +201,12 @@ export function AboutSection({
             gap: 4rem;
           }
           .about-section-text {
-            align-items: center;
+            align-items: stretch;
+            width: 100%;
+          }
+          .about-card {
+            padding: 2.5rem 2rem;
+            text-align: center;
           }
           .about-description {
             max-width: 100%;
