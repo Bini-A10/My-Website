@@ -54,12 +54,12 @@ export function Navbar() {
                     align-items: center;
                     padding: 0.4rem 2rem;
                     z-index: 5000;
-                    background: rgba(0, 0, 0, 0.15);
+                    background: rgba(0, 0, 0, 0.8);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
                     border-radius: 12px;
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+                    border: 1px solid rgba(244, 8, 8, 0.3);
+                    box-shadow: 0 4px 30px rgba(255, 0, 60, 0.3);
                 }
 
                 .logo {

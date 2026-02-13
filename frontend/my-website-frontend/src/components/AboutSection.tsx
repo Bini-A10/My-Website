@@ -173,7 +173,7 @@ export function AboutSection({
           font-family: 'Gilroy-LightItalic', sans-serif;
           font-size: 1.15rem;
           line-height: 1.7;
-          color: rgba(255, 255, 255, 0.85);
+          color: rgba(255, 255, 255, 0.9);
           margin: 0;
         }
 

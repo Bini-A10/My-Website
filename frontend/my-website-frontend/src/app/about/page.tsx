@@ -11,7 +11,7 @@ export default function AboutPage() {
         name="Biniyam Alemayehu"
         description={`I am Biniyam Alemayehu, a passionate Full-Stack Developer dedicated to building scalable, efficient, and user-focused digital solutions. I specialize in transforming complex ideas into reliable software applications that combine strong performance, clean design, and practical real-world impact. My goal is not only to write code, but to create meaningful technology that solves problems and improves everyday experiences.
           With hands-on experience in both web and mobile development, I have worked on production-grade systems across transportation, education, and business sectors. I focus on writing maintainable code, optimizing backend performance, and ensuring smooth user experiences from database to interface.`}
-        imageSrc="/images/binu1.png"
+        imageSrc="/images/me.jpeg"
         imageAlt="Biniyam Alemayehu"
       />
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
           ✦ Supporting production deployments using containerized environments
           ✦ Collaborating across multidisciplinary teams in agile workflows
           Some measurable achievements include improving operational efficiency in transportation systems, enhancing backend response times through query optimization, and developing business applications that streamline client workflows and communication.Through these experiences, I have developed a strong understanding of real-world software requirements, stakeholder collaboration, and production system reliability.`}
-        imageSrc="/images/Vision.png"
+        imageSrc="/images/work.png"
         imageAlt="Biniyam Alemayehu Vision"
       />
 
