@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Design System Demo Page
  * 
