@@ -9,7 +9,7 @@ export default function AboutPage() {
       <AboutSection
         greeting="Hello, Welcome"
         name="Biniyam Alemayehu"
-        description={`I am Biniyam Alemayehu, a passionate Full-Stack Developer dedicated to building scalable, efficient, and user-focused digital solutions. I specialize in transforming complex ideas into reliable software applications that combine strong performance, clean design, and practical real-world impact. My goal is not only to write code, but to create meaningful technology that solves problems and improves everyday experiences.
+        description={`I am a passionate Full-Stack Developer dedicated to building scalable, efficient, and user-focused digital solutions. I specialize in transforming complex ideas into reliable software applications that combine strong performance, clean design, and practical real-world impact. My goal is not only to write code, but to create meaningful technology that solves problems and improves everyday experiences.
           With hands-on experience in both web and mobile development, I have worked on production-grade systems across transportation, education, and business sectors. I focus on writing maintainable code, optimizing backend performance, and ensuring smooth user experiences from database to interface.`}
         imageSrc="/images/Me.png"
         imageAlt="Biniyam Alemayehu"

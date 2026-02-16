@@ -68,14 +68,7 @@ export function AboutSection({
         {/* Image Area */}
         <div className="about-image-frame">
           <div className="about-image-inner">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={imageWidth}
-              height={imageHeight}
-              className="about-portrait"
-              priority
-            />
+            {/* Image removed - keeping structure for layout */}
           </div>
         </div>
       </div>
@@ -104,48 +97,12 @@ export function AboutSection({
         }
 
         .about-section-text {
-          flex: 1.2;
+          flex: 5;
           display: flex;
           flex-direction: column;
           z-index: 20;
         }
 
-        .about-card {
-          background: rgba(15, 15, 15, 0.4);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 0, 60, 0.1);
-          border-radius: 2rem;
-          padding: 3.5rem;
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          box-shadow: 
-            0 20px 50px rgba(0, 0, 0, 0.5),
-            inset 0 0 20px rgba(255, 0, 60, 0.05);
-          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          position: relative;
-          overflow: hidden;
-        }
-
-        .about-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-          opacity: 0.3;
-        }
-
-        .about-card:hover {
-          transform: translateY(-5px);
-          border-color: rgba(255, 0, 60, 0.3);
-          box-shadow: 
-            0 30px 60px rgba(0, 0, 0, 0.6),
-            inset 0 0 30px rgba(255, 0, 60, 0.1);
-        }
 
         .about-greeting {
           color: var(--color-primary);
@@ -208,6 +165,7 @@ export function AboutSection({
       
 
         .about-portrait {
+          display: none;
           width: 100%;
           height: 100%;
           object-fit: cover;
