@@ -1,7 +1,24 @@
-# Dependencies
-node_modules/
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# OS specific files
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
 .DS_Store?
 ._*
@@ -9,6 +26,24 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.pem
+
+# debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # IDEs and editors
 .idea/
@@ -20,20 +55,6 @@ Thumbs.db
 *.sublime-workspace
 .vscode/
 
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-
 # Temporary files
 *.tmp
 *.bak
@@ -41,11 +62,4 @@ yarn-error.log*
 *.swo
 *.swn
 *.swm
-*.json.bak
-*_response.json
-debug.json
 
-
-# Local config
-.strapi-updater.json
-.strapi-cloud.json
