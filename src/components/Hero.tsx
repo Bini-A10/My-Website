@@ -181,7 +181,7 @@ export function Hero() {
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          z-index: 6000; /* Overlaps Navbar */
+          z-index: 4000; /* Below Navbar z-index 5000 */
           pointer-events: none; /* Let clicks pass through to Navbar */
         }
 

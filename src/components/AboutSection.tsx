@@ -201,19 +201,21 @@ export function AboutSection({
 
         @media (max-width: 640px) {
           .about-section-container {
-            padding: var(--spacing-10) var(--spacing-4);
+            padding: var(--spacing-12) var(--spacing-6) var(--spacing-16) var(--spacing-6);
           }
           .about-name {
             font-size: clamp(1.75rem, 10vw, 2.5rem);
+            margin-bottom: var(--spacing-4);
           }
           .about-greeting {
             font-size: 0.8rem;
+            margin-bottom: var(--spacing-2);
           }
           .about-description-container {
-            gap: 1rem;
+            gap: 1.5rem;
           }
           .about-description {
-            line-height: 1.6;
+            line-height: 1.8;
           }
         }
       `}</style>
