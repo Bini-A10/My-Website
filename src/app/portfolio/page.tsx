@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Citizen Registration System",
     description: "A full-scale citizen registration platform including appointment booking, payment integration, and identity management.",
-    imageSrc: "/images/work.png",
+    images: ["/images/work.png", "/images/team.png", "/images/goal.png"],
     tags: ["Java", "JavaFX", "Laravel", "MySQL"],
     problem: "Manual citizen registration processes caused long queues, inefficient data handling, and lack of centralized identity management.",
     solution: "Developed a multi-module system with appointment scheduling, integrated payment processing, and centralized citizen data management.",
@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Robera Printing Management",
     description: "A mobile management application designed for a printing business owner to monitor and control operations remotely.",
-    imageSrc: "/images/skill.png",
+    images: ["/images/skill.png", "/images/work.png"],
     tags: ["Flutter", "Dart"],
     problem: "The owner needed a simple way to track printing jobs, operations, and business activities remotely.",
     solution: "Built a dedicated mobile app allowing real-time monitoring and management of printing tasks and business workflows.",
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "Harambee E-Student Mobile",
     description: "A university student service mobile application for easier access to academic services and system functionality.",
-    imageSrc: "/images/Edu.png",
+    images: ["/images/Edu.png", "/images/approach.png", "/images/skill.png"],
     tags: ["Flutter", "Dart"],
     problem: "Students required easier mobile access to academic services and updated system functionality.",
     solution: "Contributed to feature development and later upgraded the application with improvements and updates.",
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "Harambee E-Student Website",
     description: "A web-based student management platform maintaining legacy systems and developing modernized improved solutions.",
-    imageSrc: "/images/approach.png",
+    images: ["/images/approach.png", "/images/Edu.png", "/images/work.png"],
     tags: ["Laravel", "React", "PostgreSQL"],
     problem: "Existing student portal required maintenance and modernization to improve reliability and scalability.",
     solution: "Maintained the existing platform while contributing to development of a newer improved system (frontend and backend).",
@@ -51,7 +51,7 @@ const projects = [
   {
     title: "Ride & Delivery Backend",
     description: "Backend system supporting ride booking and delivery service operations with robust database handling.",
-    imageSrc: "/images/vision.png",
+    images: ["/images/vision.png", "/images/goal.png"],
     tags: ["Spring Boot", "MySQL"],
     problem: "Needed a scalable backend to handle ride requests, delivery tracking, and operational data.",
     solution: "Built a complete backend API with robust database handling and service logic using Java Spring Boot.",
@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Transport & Cargo System",
     description: "A logistics system including backend services and mobile application for cargo transport management.",
-    imageSrc: "/images/goal.png",
+    images: ["/images/goal.png", "/images/work.png", "/images/team.png"],
     tags: ["Laravel", "Flutter", "MySQL"],
     problem: "Transport businesses needed efficient cargo tracking, management, and operational visibility.",
     solution: "Developed backend services and a mobile app for managing cargo operations and logistics workflows.",
@@ -71,7 +71,7 @@ const projects = [
   {
     title: "Inventory Frontend",
     description: "A web-based inventory system focusing on intuitive user interface for managing inventory data.",
-    imageSrc: "/images/Vision.png",
+    images: ["/images/Vision.png", "/images/skill.png"],
     tags: ["React", "Redux", "Tailwind", "CSS"],
     problem: "Needed an intuitive interface for managing inventory data efficiently.",
     solution: "Worked on frontend UI development and state management for better usability.",
@@ -81,7 +81,7 @@ const projects = [
   {
     title: "Personal Portfolio",
     description: "Responsive portfolio website showcasing projects, skills, and professional experience with modern UI/UX.",
-    imageSrc: "/images/Me.png",
+    images: ["/images/Me.png", "/images/BG.png"],
     tags: ["React", "Tailwind", "CSS"],
     problem: "Needed a professional online presence to present projects and skills effectively.",
     solution: "Designed and developed a responsive portfolio website with modern UI/UX using React and Tailwind.",
@@ -171,6 +171,7 @@ export default function PortfolioPage() {
 
         .portfolio-header {
           text-align: center;
+          margin-top: 6rem;
           margin-bottom: 6rem;
           max-width: 900px;
         }
@@ -192,6 +193,7 @@ export default function PortfolioPage() {
           line-height: 1.6;
           max-width: 700px;
           margin: 0 auto;
+          font-style: italic;
         }
 
         .section-container {
@@ -212,7 +214,7 @@ export default function PortfolioPage() {
         }
 
         .section-header-alt span {
-            font-family: var(--font-mono);
+            font-family: 'Ethnocentric', sans-serif;
             font-size: 1rem;
             color: var(--color-primary);
             background: rgba(255, 0, 60, 0.1);
