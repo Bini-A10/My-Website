@@ -201,7 +201,7 @@ export function AboutSection({
 
         @media (max-width: 640px) {
           .about-section-container {
-            padding: var(--spacing-12) var(--spacing-6) var(--spacing-16) var(--spacing-6);
+            padding: var(--spacing-20) var(--spacing-6) var(--spacing-24) var(--spacing-6);
           }
           .about-name {
             font-size: clamp(1.75rem, 10vw, 2.5rem);
