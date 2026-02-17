@@ -46,7 +46,7 @@ export function ParallaxPortrait() {
           border-radius: 50%;
           z-index: 1;
           right: 9%;
-          top: 50%;
+          top: 65%;
           transform: translateY(-50%);
           box-shadow: 0 0 80px rgba(255, 0, 60, 0.35);
           /* Subtle static gradient for depth */
@@ -93,34 +93,77 @@ export function ParallaxPortrait() {
           display: block;
         }
 
-        @media (max-width: 1024px) {
-          .red-sun {
-            width: 380px;
-            height: 380px;
-            right: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-          .portrait-layer {
-            justify-content: center;
-            padding-right: 0;
-            padding-bottom: 0;
-          }
-          .portrait-image {
-            max-height: 50vh;
-          }
-          .glow-circle {
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-        }
+       /* Tablet / Small Laptop */
+@media (max-width: 1024px) {
+  .red-sun {
+    width: 670px;
+    height: 670px;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-        @media (max-width: 768px) {
-          .red-sun {
-            width: 300px;
-            height: 300px;
-          }
-        }
+  .portrait-layer {
+    justify-content: center;
+    padding-right: 0;
+    padding-top: 10rem;
+    padding-bottom: 0;
+  }
+
+  .portrait-image {
+    width: 70%;
+    max-height: 42vh;
+  }
+
+  .glow-circle {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* Your good breakpoint (unchanged mostly) */
+@media (max-width: 768px) {
+  .red-sun {
+    width: 430px;
+    height: 430px;
+  }
+
+  .portrait-image {
+    width: 80%;
+    max-height: 40vh;
+  }
+
+  .portrait-layer {
+    padding-top: 8rem;
+  }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .red-sun {
+    width: 320px;
+    height: 320px;
+  }
+
+  .portrait-image {
+    width: 92%;
+    max-height: 32vh;
+  }
+
+  .portrait-layer {
+    padding-top: 3rem;
+  }
+
+  .glow-circle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
       `}</style>
     </div>
   );
