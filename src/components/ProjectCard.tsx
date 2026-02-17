@@ -178,7 +178,8 @@ export function ProjectCard({
           flex-direction: column;
           position: relative;
           padding: 0px 15px 0px 15px;
-          width: 600px;
+          width: 100%;
+          max-width: 700px;
         }
 
         .project-card:hover {

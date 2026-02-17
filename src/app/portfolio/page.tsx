@@ -236,7 +236,7 @@ export default function PortfolioPage() {
 
         .section-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -271,7 +271,7 @@ export default function PortfolioPage() {
 
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 3rem;
           width: 100%;
         }
@@ -287,7 +287,7 @@ export default function PortfolioPage() {
           }
           .projects-grid {
             gap: 2rem;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
           }
           .portfolio-header {
             margin-bottom: 4rem;
