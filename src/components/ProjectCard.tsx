@@ -9,8 +9,6 @@ interface ProjectCardProps {
   description: string;
   imageSrc: string;
   tags: string[];
-  liveUrl?: string;
-  githubUrl?: string;
   problem?: string;
   solution?: string;
   techStack?: string[];
@@ -22,8 +20,6 @@ export function ProjectCard({
   description,
   imageSrc,
   tags,
-  liveUrl,
-  githubUrl,
   problem,
   solution,
   techStack,
@@ -38,20 +34,6 @@ export function ProjectCard({
           fill
           className="project-image"
         />
-        <div className="project-overlay">
-          <div className="project-links">
-            {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-link-btn">
-                Live Demo
-              </a>
-            )}
-            {githubUrl && (
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="project-link-btn github">
-                GitHub
-              </a>
-            )}
-          </div>
-        </div>
       </div>
 
       <div className="project-info">
@@ -140,66 +122,6 @@ export function ProjectCard({
 
         .project-card:hover .project-image {
           transform: scale(1.1);
-        }
-
-        .project-overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(5, 5, 5, 0.85);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transition: all 0.4s ease;
-          backdrop-filter: blur(4px);
-          z-index: 10;
-        }
-
-        .project-card:hover .project-overlay {
-          opacity: 1;
-        }
-
-        .project-links {
-          display: flex;
-          gap: 1.25rem;
-          transform: translateY(20px);
-          transition: transform 0.4s ease;
-        }
-
-        .project-card:hover .project-links {
-          transform: translateY(0);
-        }
-
-        .project-link-btn {
-          padding: 0.75rem 1.5rem;
-          background: var(--color-primary);
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          font-family: 'Gilroy-Black', sans-serif;
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          transition: all 0.3s ease;
-          border: none;
-        }
-
-        .project-link-btn:hover {
-          background: white;
-          color: var(--color-primary);
-          box-shadow: 0 0 20px white;
-          transform: translateY(-3px);
-        }
-
-        .project-link-btn.github {
-          background: transparent;
-          border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .project-link-btn.github:hover {
-          background: white;
-          color: black;
-          border-color: white;
         }
 
         .project-info {
