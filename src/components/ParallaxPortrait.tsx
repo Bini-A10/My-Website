@@ -40,8 +40,8 @@ export function ParallaxPortrait() {
 
         .red-sun {
           position: absolute;
-          width: 550px;
-          height: 550px;
+          width: clamp(300px, 40vw, 550px);
+          height: clamp(300px, 40vw, 550px);
           background: var(--color-primary);
           border-radius: 50%;
           z-index: 1;
@@ -55,8 +55,8 @@ export function ParallaxPortrait() {
 
         .glow-circle {
           position: absolute;
-          width: 350px;
-          height: 350px;
+          width: clamp(200px, 30vw, 350px);
+          height: clamp(200px, 30vw, 350px);
           background: radial-gradient(
             circle,
             rgba(0, 0, 0, 0.8) 0%,
@@ -79,7 +79,7 @@ export function ParallaxPortrait() {
           display: flex;
           align-items: flex-end;
           justify-content: flex-end;
-          padding-top: 50rem;
+          padding-top: 10rem;
           padding-bottom: 0rem;
           padding-right: 5%;
         }

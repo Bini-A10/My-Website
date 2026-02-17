@@ -154,11 +154,11 @@ export default function PortfolioPage() {
             url('/images/BG.png') no-repeat center center fixed;
           background-size: cover;
           overflow-x: hidden;
-          padding: 10rem 4rem;
+          padding: var(--spacing-24) var(--spacing-8);
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 4rem;
+          gap: var(--spacing-10);
         }
 
         .portfolio-header {
@@ -179,7 +179,7 @@ export default function PortfolioPage() {
 
         .portfolio-subtitle {
           font-family: var(--font-gilroy-light-italic), sans-serif;
-          font-size: 1.4rem;
+          font-size: clamp(1rem, 2.5vw, 1.4rem);
           color: rgba(255, 255, 255, 0.7);
           line-height: 1.6;
           max-width: 700px;
@@ -235,29 +235,40 @@ export default function PortfolioPage() {
 
         @media (max-width: 1024px) {
           .portfolio-page-container {
-            padding: 8rem 2rem;
+            padding: var(--spacing-20) var(--spacing-6);
           }
           .projects-grid {
             gap: 2rem;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
           }
+          .portfolio-header {
+            margin-bottom: 4rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+           .projects-grid {
+              grid-template-columns: 1fr;
+              max-width: 500px;
+           }
         }
 
         @media (max-width: 640px) {
           .portfolio-page-container {
-            padding: 7rem 1.5rem;
+            padding: var(--spacing-16) var(--spacing-4);
           }
           .portfolio-title {
-            font-size: 2.22rem;
+            font-size: clamp(1.75rem, 8vw, 2.5rem);
           }
           .portfolio-subtitle {
-            font-size: 1.1rem;
-          }
-          .projects-grid {
-            grid-template-columns: 1fr;
+            font-size: 1rem;
           }
           .section-header-alt h3 {
-              font-size: 1.1rem;
+              font-size: 1rem;
+          }
+           .section-header-alt {
+              gap: 1rem;
+              margin-bottom: 2rem;
           }
         }
       `}</style>

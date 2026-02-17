@@ -76,11 +76,11 @@ export function AboutSection({
       <style jsx>{`
         .about-section-container {
           position: relative;
-          min-height: 80vh;
+          min-height: auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 5rem 4rem;
+          padding: var(--spacing-16) var(--spacing-8);
         }
 
         .about-section-content {
@@ -88,7 +88,7 @@ export function AboutSection({
           max-width: 1200px;
           display: flex;
           align-items: center;
-          gap: 6rem;
+          gap: clamp(2rem, 5vw, 6rem);
           z-index: 10;
         }
 
@@ -131,8 +131,8 @@ export function AboutSection({
         }
 
         .about-description {
-          font-family: 'Gilroy-LightItalic', sans-serif;
-          font-size: 1.15rem;
+          font-family: var(--font-gilroy-light-italic), sans-serif;
+          font-size: clamp(1rem, 2.5vw, 1.15rem);
           line-height: 1.7;
           color: rgba(255, 255, 255, 0.9);
           margin: 0;
@@ -174,37 +174,46 @@ export function AboutSection({
 
         @media (max-width: 1024px) {
           .about-section-container {
-            padding: 4rem 2rem;
-            min-height: auto;
+            padding: var(--spacing-12) var(--spacing-6);
           }
           .about-section-content,
           .reversed .about-section-content {
             flex-direction: column;
             text-align: center;
-            gap: 4rem;
+            gap: 3rem;
           }
           .about-section-text {
-            align-items: stretch;
+            align-items: center;
             width: 100%;
           }
           .about-card {
-            padding: 2.5rem 2rem;
             text-align: center;
+          }
+          .about-description-container {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
           }
           .about-description {
             max-width: 100%;
           }
-          .about-image-inner {
-            max-width: 400px;
-          }
         }
 
         @media (max-width: 640px) {
-          .about-name {
-            font-size: 2.5rem;
+          .about-section-container {
+            padding: var(--spacing-10) var(--spacing-4);
           }
-          .about-image-inner {
-            border-radius: 30px;
+          .about-name {
+            font-size: clamp(1.75rem, 10vw, 2.5rem);
+          }
+          .about-greeting {
+            font-size: 0.8rem;
+          }
+          .about-description-container {
+            gap: 1rem;
+          }
+          .about-description {
+            line-height: 1.6;
           }
         }
       `}</style>

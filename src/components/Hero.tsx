@@ -107,6 +107,7 @@ export function Hero() {
 
         .hero-name {
           font-family: 'Ethnocentric', cursive;
+          font-size: clamp(2rem, 8vw, 4.5rem);
           letter-spacing: normal;
           display: block;
           margin-top: 0.5rem;
@@ -114,7 +115,7 @@ export function Hero() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           /* Ensure the name doesn't clip */
-          width: max-content;
+          width: fit-content;
           max-width: 100%;
         }
 
@@ -134,7 +135,7 @@ export function Hero() {
 
         .hero-bio {
           font-family: var(--font-gilroy-light-italic), sans-serif;
-          font-size: 1.15rem;
+          font-size: clamp(1rem, 2.5vw, 1.15rem);
           line-height: 1.6;
           color: rgba(255, 255, 255, 0.8);
           margin: 0;
@@ -193,16 +194,19 @@ export function Hero() {
         @media (max-width: 1024px) {
           .hero-container {
             padding: 6rem 1.5rem 2rem 1.5rem;
+            justify-content: center;
           }
           .hero-content {
             flex-direction: column;
             text-align: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 4rem;
+            padding-top: 4rem;
           }
           .hero-main {
             align-items: center;
             max-width: 100%;
+            order: 2;
           }
           .accent-line {
             display: none;
@@ -211,12 +215,30 @@ export function Hero() {
             justify-content: center;
           }
           .hero-portrait-container {
-             height: 450px;
+             height: auto;
+             min-height: 350px;
              width: 100%;
              justify-content: center;
+             order: 1;
           }
           .hero-bg-text {
-            font-size: 25vw;
+            font-size: 30vw;
+            top: 30%;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .hero-container {
+            padding: 5rem 1rem 2rem 1rem;
+          }
+          .hero-content {
+            gap: 2rem;
+          }
+          .hero-portrait-container {
+            min-height: 300px;
+          }
+          .hero-title {
+            font-size: clamp(2rem, 10vw, 3rem);
           }
         }
       `}</style>

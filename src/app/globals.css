@@ -126,31 +126,19 @@
   --font-cursive: var(--font-snowboarding);
   --font-accent: var(--font-gilroy-black);
 
-  /* Font Sizes */
-  --font-size-h1: 3.5rem;
-  /* 56px */
-  --font-size-h2: 2.5rem;
-  /* 40px */
-  --font-size-h3: 2rem;
-  /* 32px */
-  --font-size-h4: 1.5rem;
-  /* 24px */
-  --font-size-h5: 1.25rem;
-  /* 20px */
-  --font-size-h6: 1.125rem;
-  /* 18px */
+  /* Font Sizes - Fluid using clamp() */
+  --font-size-h1: clamp(2.5rem, 8vw, 3.5rem);
+  --font-size-h2: clamp(2rem, 6vw, 2.5rem);
+  --font-size-h3: clamp(1.75rem, 5vw, 2rem);
+  --font-size-h4: clamp(1.25rem, 4vw, 1.5rem);
+  --font-size-h5: clamp(1.1rem, 3.5vw, 1.25rem);
+  --font-size-h6: clamp(1rem, 3vw, 1.125rem);
   --font-size-base: 1rem;
-  /* 16px */
-  --font-size-lg: 1.125rem;
-  /* 18px */
-  --font-size-xl: 1.25rem;
-  /* 20px */
+  --font-size-lg: clamp(1rem, 2.5vw, 1.125rem);
+  --font-size-xl: clamp(1.1rem, 3vw, 1.25rem);
   --font-size-sm: 0.875rem;
-  /* 14px */
   --font-size-xs: 0.75rem;
-  /* 12px */
   --font-size-xxs: 0.625rem;
-  /* 10px */
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -186,26 +174,26 @@
   /* 8px */
   --spacing-3: 0.75rem;
   /* 12px */
-  --spacing-4: 1rem;
-  /* 16px */
-  --spacing-5: 1.25rem;
-  /* 20px */
-  --spacing-6: 1.5rem;
-  /* 24px */
-  --spacing-8: 2rem;
-  /* 32px */
-  --spacing-10: 2.5rem;
-  /* 40px */
-  --spacing-12: 3rem;
-  /* 48px */
-  --spacing-16: 4rem;
-  /* 64px */
-  --spacing-20: 5rem;
-  /* 80px */
-  --spacing-24: 6rem;
-  /* 96px */
-  --spacing-32: 8rem;
-  /* 128px */
+  --spacing-4: clamp(0.75rem, 2vw, 1rem);
+  /* 16px (fluid) */
+  --spacing-5: clamp(1rem, 2.5vw, 1.25rem);
+  /* 20px (fluid) */
+  --spacing-6: clamp(1.25rem, 3vw, 1.5rem);
+  /* 24px (fluid) */
+  --spacing-8: clamp(1.5rem, 4vw, 2rem);
+  /* 32px (fluid) */
+  --spacing-10: clamp(2rem, 5vw, 2.5rem);
+  /* 40px (fluid) */
+  --spacing-12: clamp(2.5rem, 6vw, 3rem);
+  /* 48px (fluid) */
+  --spacing-16: clamp(3rem, 8vw, 4rem);
+  /* 64px (fluid) */
+  --spacing-20: clamp(4rem, 10vw, 5rem);
+  /* 80px (fluid) */
+  --spacing-24: clamp(5rem, 12vw, 6rem);
+  /* 96px (fluid) */
+  --spacing-32: clamp(6rem, 15vw, 8rem);
+  /* 128px (fluid) */
 
   /* ========================================
      BORDER RADIUS

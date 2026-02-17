@@ -100,7 +100,7 @@ export default function ContactPage() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 8rem 2rem 4rem 2rem;
+          padding: var(--spacing-24) var(--spacing-8) var(--spacing-12);
         }
 
         .contact-section {
@@ -142,7 +142,7 @@ export default function ContactPage() {
           -webkit-backdrop-filter: blur(12px);
           border: 1px solid rgba(255, 0, 60, 0.2);
           border-radius: 20px;
-          padding: 3rem;
+          padding: clamp(1.5rem, 5vw, 3rem);
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
         }
 
@@ -187,12 +187,13 @@ export default function ContactPage() {
         }
 
         .info-value {
-          font-family: 'Gilroy-LightItalic', sans-serif;
-          font-size: 1.2rem;
+          font-family: var(--font-gilroy-light-italic), sans-serif;
+          font-size: clamp(1rem, 2.5vw, 1.2rem);
           color: rgba(255, 255, 255, 0.9);
           text-decoration: none;
           transition: all 0.3s ease;
           padding-left: 0.25rem;
+          word-break: break-all;
         }
 
         .info-value:hover {
@@ -275,16 +276,30 @@ export default function ContactPage() {
             gap: 2rem;
           }
           .contact-page-container {
-            padding-top: 10rem;
+            padding-top: var(--spacing-24);
+          }
+          .contact-header {
+            margin-bottom: 2.5rem;
           }
         }
 
         @media (max-width: 640px) {
           .glass {
-            padding: 2rem 1.5rem;
+            padding: 1.5rem;
+            border-radius: 12px;
           }
           .contact-title {
-            font-size: 2rem;
+            font-size: clamp(1.75rem, 10vw, 2.5rem);
+          }
+          .contact-subtitle {
+            font-size: 1rem;
+          }
+          .info-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+          }
+          .info-items {
+            gap: 1.5rem;
           }
         }
       `}</style>
