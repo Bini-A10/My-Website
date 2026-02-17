@@ -9,76 +9,100 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 const projects = [
   {
-    title: "E-Commerce System",
-    description: "A full-stack e-commerce solution with real-time inventory management and secure payment integration.",
+    title: "Citizen Registration System",
+    description: "A full-scale citizen registration platform including appointment booking, payment integration, and identity management.",
     imageSrc: "/images/work.png",
-    tags: ["Laravel", "React", "MySQL", "Tailwind"],
+    tags: ["Java", "JavaFX", "Laravel", "MySQL"],
     liveUrl: "#",
     githubUrl: "#",
-    problem: "Inefficient manual inventory tracking and slow checkout processes leading to customer churn.",
-    solution: "Implemented a real-time WebSocket-based inventory system and integrated Stripe for seamless payments.",
-    techStack: ["Laravel 10", "React 18", "Redis", "Stripe API"],
-    outcome: "30% increase in checkout speed and 100% accuracy in stock levels."
+    problem: "Manual citizen registration processes caused long queues, inefficient data handling, and lack of centralized identity management.",
+    solution: "Developed a multi-module system with appointment scheduling, integrated payment processing, and centralized citizen data management.",
+    techStack: ["Java", "JavaFX", "Laravel", "HTML", "CSS", "JavaScript", "MySQL"],
+    outcome: "Improved registration efficiency, digitized identity records, and streamlined appointment and payment workflows."
   },
   {
-    title: "School Management App",
-    description: "Comprehensive platform for educational institutions featuring student tracking and automated reporting.",
-    imageSrc: "/images/Edu.png",
-    tags: ["Spring Boot", "Flutter", "Java", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    problem: "Difficulty in managing large student datasets and the lack of a centralized platform for grading.",
-    solution: "Developed a microservices architecture to handle high concurrency and a cross-platform mobile app for parents.",
-    techStack: ["Spring Boot", "Flutter SDK", "Docker", "PostgreSQL"],
-    outcome: "Streamlined administrative tasks for 5+ institutions, serving 2000+ students."
-  },
-  {
-    title: "Transportation SaaS",
-    description: "Cloud-based fleet management and logistics tracking system improving operational efficiency.",
-    imageSrc: "/images/approach.png",
-    tags: ["Node.js", "Docker", "MongoDB", "Redis"],
-    liveUrl: "#",
-    githubUrl: "#",
-    problem: "Lack of real-time visibility into vehicle locations and fuel consumption in large fleets.",
-    solution: "Built a real-time GPS tracking dashboard and fuel analytics engine using Node.js and IoT sensors.",
-    techStack: ["Node.js", "Socket.io", "MongoDB", "Google Maps API"],
-    outcome: "Reduced fuel costs by 15% and improved route efficiency by 25%."
-  },
-  {
-    title: "Mobile Business Suite",
-    description: "A suite of business tools including CRM, task management, and offline-capable reporting.",
+    title: "Robera Printing Management",
+    description: "A mobile management application designed for a printing business owner to monitor and control operations remotely.",
     imageSrc: "/images/skill.png",
-    tags: ["Flutter", "Dart", "Firebase", "SQLite"],
+    tags: ["Flutter", "Dart"],
     liveUrl: "#",
     githubUrl: "#",
-    problem: "Sales teams in rural areas struggled with poor connectivity while needing access to customer data.",
-    solution: "Engineered a robust SQLite-based offline sync mechanism that reconciles data when back online.",
-    techStack: ["Flutter", "SQLite", "Firebase Auth", "Riverpod"],
-    outcome: "Enabled 100% productivity in low-connectivity areas for 50+ sales reps."
+    problem: "The owner needed a simple way to track printing jobs, operations, and business activities remotely.",
+    solution: "Built a dedicated mobile app allowing real-time monitoring and management of printing tasks and business workflows.",
+    techStack: ["Flutter", "Dart"],
+    outcome: "Enabled mobile business control, improved operational visibility, and simplified daily management tasks."
   },
   {
-    title: "AI Analysis Portal",
-    description: "Advanced data visualization and AI-driven insights for inventory sales trends.",
+    title: "Harambee E-Student Mobile",
+    description: "A university student service mobile application for easier access to academic services and system functionality.",
+    imageSrc: "/images/Edu.png",
+    tags: ["Flutter", "Dart"],
+    liveUrl: "#",
+    githubUrl: "#",
+    problem: "Students required easier mobile access to academic services and updated system functionality.",
+    solution: "Contributed to feature development and later upgraded the application with improvements and updates.",
+    techStack: ["Flutter", "Dart"],
+    outcome: "Enhanced student accessibility, improved usability, and modernized system functionality."
+  },
+  {
+    title: "Harambee E-Student Website",
+    description: "A web-based student management platform maintaining legacy systems and developing modernized improved solutions.",
+    imageSrc: "/images/approach.png",
+    tags: ["Laravel", "React", "PostgreSQL"],
+    liveUrl: "#",
+    githubUrl: "#",
+    problem: "Existing student portal required maintenance and modernization to improve reliability and scalability.",
+    solution: "Maintained the existing platform while contributing to development of a newer improved system (frontend and backend).",
+    techStack: ["Laravel", "React", "PostgreSQL"],
+    outcome: "Improved system stability, better performance, and enhanced student service delivery."
+  },
+  {
+    title: "Ride & Delivery Backend",
+    description: "Backend system supporting ride booking and delivery service operations with robust database handling.",
     imageSrc: "/images/vision.png",
-    tags: ["React", "Python", "Data Viz", "AWS"],
+    tags: ["Spring Boot", "MySQL"],
     liveUrl: "#",
     githubUrl: "#",
-    problem: "Businesses failing to predict seasonal demand, resulting in overstocking or missing sales.",
-    solution: "Integrated a Python Flask backend with ML models to provide demand forecasting visuals.",
-    techStack: ["React", "Python Flask", "Scikit-Learn", "D3.js"],
-    outcome: "Improved inventory turnover ratio by 20% for early adopters."
+    problem: "Needed a scalable backend to handle ride requests, delivery tracking, and operational data.",
+    solution: "Built a complete backend API with robust database handling and service logic using Java Spring Boot.",
+    techStack: ["Java Spring Boot", "MySQL"],
+    outcome: "Reliable backend infrastructure supporting ride and delivery service functionality."
   },
   {
-    title: "Full-Stack Portfolio",
-    description: "Modern, high-performance personal portfolio with Cyber Ninja aesthetics.",
-    imageSrc: "/images/Me.png",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    title: "Transport & Cargo System",
+    description: "A logistics system including backend services and mobile application for cargo transport management.",
+    imageSrc: "/images/goal.png",
+    tags: ["Laravel", "Flutter", "MySQL"],
     liveUrl: "#",
     githubUrl: "#",
-    problem: "Standard portfolios lacked the professional depth and brand identity required to stand out.",
-    solution: "Designed a unique dark/blood-red theme with glassmorphism and structured project cases.",
-    techStack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    outcome: "Created a premium digital presence that effectively communicates full-stack capabilities."
+    problem: "Transport businesses needed efficient cargo tracking, management, and operational visibility.",
+    solution: "Developed backend services and a mobile app for managing cargo operations and logistics workflows.",
+    techStack: ["Laravel", "Flutter", "Dart", "MySQL"],
+    outcome: "Improved cargo tracking, streamlined logistics management, and enhanced operational efficiency."
+  },
+  {
+    title: "Inventory Frontend",
+    description: "A web-based inventory system focusing on intuitive user interface for managing inventory data.",
+    imageSrc: "/images/Vision.png",
+    tags: ["React", "Redux", "Tailwind", "CSS"],
+    liveUrl: "#",
+    githubUrl: "#",
+    problem: "Needed an intuitive interface for managing inventory data efficiently.",
+    solution: "Worked on frontend UI development and state management for better usability.",
+    techStack: ["React", "Redux", "Tailwind CSS"],
+    outcome: "Enhanced user experience and improved content management workflow."
+  },
+  {
+    title: "Personal Portfolio",
+    description: "Responsive portfolio website showcasing projects, skills, and professional experience with modern UI/UX.",
+    imageSrc: "/images/Me.png",
+    tags: ["React", "Tailwind", "CSS"],
+    liveUrl: "#",
+    githubUrl: "#",
+    problem: "Needed a professional online presence to present projects and skills effectively.",
+    solution: "Designed and developed a responsive portfolio website with modern UI/UX using React and Tailwind.",
+    techStack: ["React", "Tailwind", "CSS"],
+    outcome: "Strong personal branding platform and centralized professional portfolio."
   }
 ];
 
