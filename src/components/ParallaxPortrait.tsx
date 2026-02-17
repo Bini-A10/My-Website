@@ -40,12 +40,12 @@ export function ParallaxPortrait() {
 
         .red-sun {
           position: absolute;
-          width: 500px;
-          height: 500px;
+          width: 550px;
+          height: 550px;
           background: var(--color-primary);
           border-radius: 50%;
           z-index: 1;
-          right: 2%;
+          right: 5%;
           top: 50%;
           transform: translateY(-50%);
           box-shadow: 0 0 80px rgba(255, 0, 60, 0.35);
