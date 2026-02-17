@@ -39,7 +39,7 @@ export default function AboutPage() {
       {/* Section 3: Default (Text Left, Image Right) */}
       <AboutSection
         greeting="My Work"
-        name="Professional Experience"
+        name="Experience"
         description={`Currently, I work as a Software Developer at Hawi Software Solution, where I contribute to the development of enterprise-level web and mobile applications. My responsibilities include:
           ✦ Designing scalable backend APIs and full-stack systems
           ✦ Optimizing databases and application performance
@@ -177,11 +177,11 @@ export default function AboutPage() {
             url('/images/BG.png') no-repeat center center fixed;
           background-size: cover;
           overflow-x: hidden;
-          padding: 10rem 4rem;
+          padding: 10rem 6rem;
         }
 
         .beyond-tech-section {
-          padding: 8rem 4rem;
+          padding: 8rem 6rem;
           display: flex;
           justify-content: center;
           align-items: center;

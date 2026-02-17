@@ -178,6 +178,7 @@ export function ProjectCard({
           flex-direction: column;
           position: relative;
           padding: 0px 15px 0px 15px;
+          width: 600px;
         }
 
         .project-card:hover {
@@ -189,7 +190,8 @@ export function ProjectCard({
         .project-image-container {
           position: relative;
           width: 100%;
-          padding-top: 56.25%; /* 16:9 Aspect Ratio */
+          padding-top: 100%; /* Compact Height */
+         
           overflow: hidden;
           background: #000;
         }

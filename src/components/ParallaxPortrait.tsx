@@ -45,7 +45,7 @@ export function ParallaxPortrait() {
           background: var(--color-primary);
           border-radius: 50%;
           z-index: 1;
-          right: 9%;
+          right: 15%;
           top: 65%;
           transform: translateY(-50%);
           box-shadow: 0 0 80px rgba(255, 0, 60, 0.35);
@@ -79,7 +79,7 @@ export function ParallaxPortrait() {
           display: flex;
           align-items: flex-end;
           justify-content: flex-end;
-          padding-top: 50rem;
+          padding-top: 60rem;
           padding-bottom: 0rem;
           padding-right: 5%;
         }

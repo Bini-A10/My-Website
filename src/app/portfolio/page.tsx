@@ -11,7 +11,15 @@ const projects = [
   {
     title: "Citizen Registration System",
     description: "A full-scale citizen registration platform including appointment booking, payment integration, and identity management.",
-    images: ["/images/work.png", "/images/team.png", "/images/goal.png"],
+    images: [
+      "/images/cris/cris1.jpg",
+      "/images/cris/cris2.jpg",
+      "/images/cris/cris3.jpg",
+      "/images/cris/cris4.jpg",
+      "/images/cris/cris5.png",
+      "/images/cris/cris6.jpg",
+      "/images/cris/cris7.png"
+    ],
     tags: ["Java", "JavaFX", "Laravel", "MySQL"],
     problem: "Manual citizen registration processes caused long queues, inefficient data handling, and lack of centralized identity management.",
     solution: "Developed a multi-module system with appointment scheduling, integrated payment processing, and centralized citizen data management.",
@@ -21,7 +29,11 @@ const projects = [
   {
     title: "Robera Printing Management",
     description: "A mobile management application designed for a printing business owner to monitor and control operations remotely.",
-    images: ["/images/skill.png", "/images/work.png"],
+    images: [
+      "/images/robera/r1.png",
+      "/images/robera/r2.png",
+      "/images/robera/r3.png"
+    ],
     tags: ["Flutter", "Dart"],
     problem: "The owner needed a simple way to track printing jobs, operations, and business activities remotely.",
     solution: "Built a dedicated mobile app allowing real-time monitoring and management of printing tasks and business workflows.",
@@ -31,7 +43,12 @@ const projects = [
   {
     title: "Harambee E-Student Mobile",
     description: "A university student service mobile application for easier access to academic services and system functionality.",
-    images: ["/images/Edu.png", "/images/approach.png", "/images/skill.png"],
+    images: [
+      "/images/e-student mobile/e1.png",
+      "/images/e-student mobile/e2.png",
+      "/images/e-student mobile/e3.png",
+      "/images/e-student mobile/e4.png"
+    ],
     tags: ["Flutter", "Dart"],
     problem: "Students required easier mobile access to academic services and updated system functionality.",
     solution: "Contributed to feature development and later upgraded the application with improvements and updates.",
@@ -41,7 +58,11 @@ const projects = [
   {
     title: "Harambee E-Student Website",
     description: "A web-based student management platform maintaining legacy systems and developing modernized improved solutions.",
-    images: ["/images/approach.png", "/images/Edu.png", "/images/work.png"],
+    images: [
+      "/images/e-student web/ew1.jpg",
+      "/images/e-student web/ew2.jpg",
+      "/images/e-student web/ew3.jpg"
+    ],
     tags: ["Laravel", "React", "PostgreSQL"],
     problem: "Existing student portal required maintenance and modernization to improve reliability and scalability.",
     solution: "Maintained the existing platform while contributing to development of a newer improved system (frontend and backend).",
@@ -51,7 +72,12 @@ const projects = [
   {
     title: "Ride & Delivery Backend",
     description: "Backend system supporting ride booking and delivery service operations with robust database handling.",
-    images: ["/images/vision.png", "/images/goal.png"],
+    images: [
+      "/images/ride and delivery/rd1.png",
+      "/images/ride and delivery/rd2.png",
+      "/images/ride and delivery/rd3.png",
+      "/images/ride and delivery/rd4.png"
+    ],
     tags: ["Spring Boot", "MySQL"],
     problem: "Needed a scalable backend to handle ride requests, delivery tracking, and operational data.",
     solution: "Built a complete backend API with robust database handling and service logic using Java Spring Boot.",
@@ -61,7 +87,13 @@ const projects = [
   {
     title: "Transport & Cargo System",
     description: "A logistics system including backend services and mobile application for cargo transport management.",
-    images: ["/images/goal.png", "/images/work.png", "/images/team.png"],
+    images: [
+      "/images/transport and cargo/tc1.png",
+      "/images/transport and cargo/tc2.png",
+      "/images/transport and cargo/tc3.png",
+      "/images/transport and cargo/tc4.png",
+      "/images/transport and cargo/tc5.png"
+    ],
     tags: ["Laravel", "Flutter", "MySQL"],
     problem: "Transport businesses needed efficient cargo tracking, management, and operational visibility.",
     solution: "Developed backend services and a mobile app for managing cargo operations and logistics workflows.",
@@ -71,7 +103,13 @@ const projects = [
   {
     title: "Inventory Frontend",
     description: "A web-based inventory system focusing on intuitive user interface for managing inventory data.",
-    images: ["/images/Vision.png", "/images/skill.png"],
+    images: [
+      "/images/inventory/i1.png",
+      "/images/inventory/i2.png",
+      "/images/inventory/i3.png",
+      "/images/inventory/i4.png",
+      "/images/inventory/i5.png"
+    ],
     tags: ["React", "Redux", "Tailwind", "CSS"],
     problem: "Needed an intuitive interface for managing inventory data efficiently.",
     solution: "Worked on frontend UI development and state management for better usability.",
@@ -198,7 +236,7 @@ export default function PortfolioPage() {
 
         .section-container {
             width: 100%;
-            max-width: 1250px;
+            max-width: 1200px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -233,7 +271,7 @@ export default function PortfolioPage() {
 
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
           gap: 3rem;
           width: 100%;
         }
