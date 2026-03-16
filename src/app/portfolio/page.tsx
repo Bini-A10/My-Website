@@ -7,7 +7,7 @@ import { ResumeSection } from '@/components/ResumeSection';
 import { EducationSection } from '@/components/EducationSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 
-const projects = [
+const webProjects = [
   {
     title: "Citizen Registration System",
     description: "A full-scale citizen registration platform including appointment booking, payment integration, and identity management.",
@@ -27,35 +27,6 @@ const projects = [
     outcome: "Improved registration efficiency, digitized identity records, and streamlined appointment and payment workflows."
   },
   {
-    title: "Robera Printing Management",
-    description: "A mobile management application designed for a printing business owner to monitor and control operations remotely.",
-    images: [
-      "/images/robera/r1.png",
-      "/images/robera/r2.png",
-      "/images/robera/r3.png"
-    ],
-    tags: ["Flutter", "Dart"],
-    problem: "The owner needed a simple way to track printing jobs, operations, and business activities remotely.",
-    solution: "Built a dedicated mobile app allowing real-time monitoring and management of printing tasks and business workflows.",
-    techStack: ["Flutter", "Dart"],
-    outcome: "Enabled mobile business control, improved operational visibility, and simplified daily management tasks."
-  },
-  {
-    title: "Harambee E-Student Mobile",
-    description: "A university student service mobile application for easier access to academic services and system functionality.",
-    images: [
-      "/images/e-student mobile/e1.png",
-      "/images/e-student mobile/e2.png",
-      "/images/e-student mobile/e3.png",
-      "/images/e-student mobile/e4.png"
-    ],
-    tags: ["Flutter", "Dart"],
-    problem: "Students required easier mobile access to academic services and updated system functionality.",
-    solution: "Contributed to feature development and later upgraded the application with improvements and updates.",
-    techStack: ["Flutter", "Dart"],
-    outcome: "Enhanced student accessibility, improved usability, and modernized system functionality."
-  },
-  {
     title: "Harambee E-Student Website",
     description: "A web-based student management platform maintaining legacy systems and developing modernized improved solutions.",
     images: [
@@ -68,37 +39,6 @@ const projects = [
     solution: "Maintained the existing platform while contributing to development of a newer improved system (frontend and backend).",
     techStack: ["Laravel", "React", "PostgreSQL"],
     outcome: "Improved system stability, better performance, and enhanced student service delivery."
-  },
-  {
-    title: "Ride & Delivery Backend",
-    description: "Backend system supporting ride booking and delivery service operations with robust database handling.",
-    images: [
-      "/images/ride and delivery/rd1.png",
-      "/images/ride and delivery/rd2.png",
-      "/images/ride and delivery/rd3.png",
-      "/images/ride and delivery/rd4.png"
-    ],
-    tags: ["Spring Boot", "MySQL"],
-    problem: "Needed a scalable backend to handle ride requests, delivery tracking, and operational data.",
-    solution: "Built a complete backend API with robust database handling and service logic using Java Spring Boot.",
-    techStack: ["Java Spring Boot", "MySQL"],
-    outcome: "Reliable backend infrastructure supporting ride and delivery service functionality."
-  },
-  {
-    title: "Transport & Cargo System",
-    description: "A logistics system including backend services and mobile application for cargo transport management.",
-    images: [
-      "/images/transport and cargo/tc1.png",
-      "/images/transport and cargo/tc2.png",
-      "/images/transport and cargo/tc3.png",
-      "/images/transport and cargo/tc4.png",
-      "/images/transport and cargo/tc5.png"
-    ],
-    tags: ["Laravel", "Flutter", "MySQL"],
-    problem: "Transport businesses needed efficient cargo tracking, management, and operational visibility.",
-    solution: "Developed backend services and a mobile app for managing cargo operations and logistics workflows.",
-    techStack: ["Laravel", "Flutter", "Dart", "MySQL"],
-    outcome: "Improved cargo tracking, streamlined logistics management, and enhanced operational efficiency."
   },
   {
     title: "Inventory Frontend",
@@ -132,6 +72,69 @@ const projects = [
   }
 ];
 
+const mobileProjects = [
+  {
+    title: "Robera Printing Management",
+    description: "A mobile management application designed for a printing business owner to monitor and control operations remotely.",
+    images: [
+      "/images/robera/r1.png",
+      "/images/robera/r2.png",
+      "/images/robera/r3.png"
+    ],
+    tags: ["Flutter", "Dart"],
+    problem: "The owner needed a simple way to track printing jobs, operations, and business activities remotely.",
+    solution: "Built a dedicated mobile app allowing real-time monitoring and management of printing tasks and business workflows.",
+    techStack: ["Flutter", "Dart"],
+    outcome: "Enabled mobile business control, improved operational visibility, and simplified daily management tasks."
+  },
+  {
+    title: "Harambee E-Student Mobile",
+    description: "A university student service mobile application for easier access to academic services and system functionality.",
+    images: [
+      "/images/e-student mobile/e1.png",
+      "/images/e-student mobile/e2.png",
+      "/images/e-student mobile/e3.png",
+      "/images/e-student mobile/e4.png"
+    ],
+    tags: ["Flutter", "Dart"],
+    problem: "Students required easier mobile access to academic services and updated system functionality.",
+    solution: "Contributed to feature development and later upgraded the application with improvements and updates.",
+    techStack: ["Flutter", "Dart"],
+    outcome: "Enhanced student accessibility, improved usability, and modernized system functionality."
+  },
+  {
+    title: "Transport & Cargo System",
+    description: "A logistics system including backend services and mobile application for cargo transport management.",
+    images: [
+      "/images/transport and cargo/tc1.png",
+      "/images/transport and cargo/tc2.png",
+      "/images/transport and cargo/tc3.png",
+      "/images/transport and cargo/tc4.png",
+      "/images/transport and cargo/tc5.png"
+    ],
+    tags: ["Laravel", "Flutter", "MySQL"],
+    problem: "Transport businesses needed efficient cargo tracking, management, and operational visibility.",
+    solution: "Developed backend services and a mobile app for managing cargo operations and logistics workflows.",
+    techStack: ["Laravel", "Flutter", "Dart", "MySQL"],
+    outcome: "Improved cargo tracking, streamlined logistics management, and enhanced operational efficiency."
+  },
+  {
+    title: "Ride & Delivery Backend",
+    description: "Backend system supporting ride booking and delivery service operations with robust database handling.",
+    images: [
+      "/images/ride and delivery/rd1.png",
+      "/images/ride and delivery/rd2.png",
+      "/images/ride and delivery/rd3.png",
+      "/images/ride and delivery/rd4.png"
+    ],
+    tags: ["Spring Boot", "MySQL"],
+    problem: "Needed a scalable backend to handle ride requests, delivery tracking, and operational data.",
+    solution: "Built a complete backend API with robust database handling and service logic using Java Spring Boot.",
+    techStack: ["Java Spring Boot", "MySQL"],
+    outcome: "Reliable backend infrastructure supporting ride and delivery service functionality."
+  }
+];
+
 export default function PortfolioPage() {
   return (
     <main className="portfolio-page-container">
@@ -144,14 +147,29 @@ export default function PortfolioPage() {
         </p>
       </div>
 
-      {/* 2. Projects Section */}
+      {/* 2. Web Applications Section */}
       <section className="section-container">
         <div className="section-header-alt">
           <span>01</span>
-          <h3>Featured Projects</h3>
+          <h3>Web Applications</h3>
         </div>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
+        <div className="web-projects-grid">
+          {webProjects.map((project, index) => (
+            <div key={index} className="project-grid-item">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 2. Mobile Applications Section */}
+      <section className="section-container">
+        <div className="section-header-alt">
+          <span>02</span>
+          <h3>Mobile Applications</h3>
+        </div>
+        <div className="mobile-projects-grid">
+          {mobileProjects.map((project, index) => (
             <div key={index} className="project-grid-item">
               <ProjectCard {...project} />
             </div>
@@ -162,7 +180,7 @@ export default function PortfolioPage() {
       {/* 3. Resume Section */}
       <section className="section-container">
         <div className="section-header-alt">
-          <span>02</span>
+          <span>03</span>
           <h3>Recruiter Pack</h3>
         </div>
         <ResumeSection />
@@ -171,7 +189,7 @@ export default function PortfolioPage() {
       {/* 4. Skills Section */}
       <section className="section-container">
         <div className="section-header-alt">
-          <span>03</span>
+          <span>04</span>
           <h3>Technical Stack</h3>
         </div>
         <SkillsSection />
@@ -180,7 +198,7 @@ export default function PortfolioPage() {
       {/* 5. Education Section */}
       <section className="section-container">
         <div className="section-header-alt">
-          <span>04</span>
+          <span>05</span>
           <h3>Background</h3>
         </div>
         <EducationSection />
@@ -189,7 +207,7 @@ export default function PortfolioPage() {
       {/* 6. Testimonials Section */}
       <section className="section-container">
         <div className="section-header-alt">
-          <span>05</span>
+          <span>06</span>
           <h3>Endorsements</h3>
         </div>
         <TestimonialsSection />
@@ -273,7 +291,14 @@ export default function PortfolioPage() {
             letter-spacing: 2px;
         }
 
-        .projects-grid {
+        .web-projects-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 3rem;
+          width: 100%;
+        }
+
+        .mobile-projects-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 3rem;
@@ -289,7 +314,7 @@ export default function PortfolioPage() {
           .portfolio-page-container {
             padding: var(--spacing-20) var(--spacing-6);
           }
-          .projects-grid {
+          .web-projects-grid, .mobile-projects-grid {
             gap: 2rem;
             grid-template-columns: repeat(2, 1fr);
           }
@@ -299,9 +324,9 @@ export default function PortfolioPage() {
         }
 
         @media (max-width: 768px) {
-           .projects-grid {
+           .web-projects-grid, .mobile-projects-grid {
               grid-template-columns: 1fr;
-              max-width: 500px;
+              max-width: 600px;
            }
         }
 

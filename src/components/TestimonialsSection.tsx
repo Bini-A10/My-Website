@@ -20,14 +20,33 @@ const testimonials = [
         author: "David Chen",
         role: "Senior Staff Engineer, Google",
         avatar: "DC"
+    },
+    {
+        quote: "Biniyam is an exceptional developer who combines deep technical knowledge with a keen eye for user experience. His work on our inventory system was transformative.",
+        author: "Sarah Johnson",
+        role: "CTO, TechLogistics SaaS",
+        avatar: "SJ"
+    },
+    {
+        quote: "Reliable, proactive, and technically brilliant. He delivered our mobile app ahead of schedule and the code quality was top-notch. Highly recommended!",
+        author: "Alemayehu T.",
+        role: "Founder, EduPath Solutions",
+        avatar: "AT"
+    },
+    {
+        quote: "One of the most talented full-stack engineers I've mentored. His ability to grasp complex architectures and implement them efficiently is rare.",
+        author: "David Chen",
+        role: "Senior Staff Engineer, Google",
+        avatar: "DC"
     }
+    
 ];
 
 export function TestimonialsSection() {
     return (
         <section className="testimonials-section">
             <h2 className="section-title">Testimonials</h2>
-            <div className="testimonials-grid">
+            <div className="testimonials-scroll-area">
                 {testimonials.map((item, idx) => (
                     <div key={idx} className="testimonial-card glass">
                         <div className="quote-icon">
@@ -66,13 +85,33 @@ export function TestimonialsSection() {
           text-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
         }
 
-        .testimonials-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        .testimonials-scroll-area {
+          display: flex;
+          overflow-x: auto;
           gap: 2rem;
+          padding: 1rem 2rem 3rem;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: thin;
+          scrollbar-color: var(--color-primary) transparent;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .testimonials-scroll-area::-webkit-scrollbar {
+          height: 6px;
+        }
+
+        .testimonials-scroll-area::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+        }
+
+        .testimonials-scroll-area::-webkit-scrollbar-thumb {
+          background: var(--color-primary);
+          border-radius: 10px;
         }
 
         .testimonial-card {
+          flex: 0 0 clamp(350px, 40vw, 500px);
           padding: 3rem 2.5rem;
           border-radius: var(--radius-lg);
           display: flex;
@@ -80,6 +119,7 @@ export function TestimonialsSection() {
           gap: 2rem;
           transition: all 0.4s ease;
           position: relative;
+          scroll-snap-align: start;
         }
 
         .testimonial-card:hover {
