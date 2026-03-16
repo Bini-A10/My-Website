@@ -4,17 +4,17 @@ import React from 'react';
 
 const skillCategories = [
     {
-        title: "Frontend Development",
+        title: "Programming Languages",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
-                <path d="M2 12l10-10 10 10-10 10z" />
-                <path d="M7 12l5-5 5 5-5 5z" />
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
             </svg>
         ),
-        skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML5/CSS3"]
+        skills: ["Java", "PHP", "Dart", "C++", "TypeScript", "SQL"]
     },
     {
-        title: "Backend & Systems",
+        title: "Frameworks & Web",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
                 <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
@@ -23,10 +23,20 @@ const skillCategories = [
                 <line x1="6" y1="18" x2="6.01" y2="18" />
             </svg>
         ),
-        skills: ["Node.js", "Spring Boot", "Laravel", "Python/Django", "PHP", "Java"]
+        skills: ["Laravel", "Spring Boot", "React (TS)", "Next.js", "JavaFX", "Tailwind CSS"]
     },
     {
-        title: "Database & Storage",
+        title: "Mobile & Desktop",
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
+        ),
+        skills: ["Flutter", "Dart", "JavaFX", "Mobile Integration", "Material Design"]
+    },
+    {
+        title: "Databases & Queries",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
                 <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -34,10 +44,10 @@ const skillCategories = [
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
             </svg>
         ),
-        skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase", "SQLite"]
+        skills: ["MySQL", "SQL Server", "MongoDB", "Query Optimization", "Database Design"]
     },
     {
-        title: "Tools & DevOps",
+        title: "Tools & Architecture",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
                 <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -45,28 +55,19 @@ const skillCategories = [
                 <path d="M2 12l10 5 10-5" />
             </svg>
         ),
-        skills: ["Docker", "AWS", "Git/GitHub", "CI/CD", "Linux", "Postman"]
+        skills: ["Docker", "Git/GitHub", "REST API Design", "MVC Structure", "Auth Systems"]
     },
     {
-        title: "Mobile Development",
+        title: "Professional Skills",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                <line x1="12" y1="18" x2="12.01" y2="18" />
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
         ),
-        skills: ["Flutter", "React Native", "Dart", "Android Studio"]
-    },
-    {
-        title: "Design & UX",
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="skill-cat-icon">
-                <circle cx="12" cy="12" r="10" />
-                <circle cx="12" cy="12" r="4" />
-                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
-            </svg>
-        ),
-        skills: ["Figma", "UI/UX Design", "Responsive Web Design", "Adobe Creative Suite"]
+        skills: ["Team Leadership", "Task Coordination", "Analytical Thinking", "Amharic & English"]
     }
 ];
 

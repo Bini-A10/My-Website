@@ -10,29 +10,47 @@ export function ResumeSection() {
                 <div className="resume-text glass">
                     <h2 className="resume-title">Professional Profile</h2>
                     <p className="resume-summary">
-                        Results-driven Full-Stack Developer with a passion for building high-performance,
-                        scalable web and mobile applications. Expert in modern JavaScript frameworks,
-                        robust backend architectures, and cloud-native solutions. Proven track record
-                        of delivering production-grade software that solves complex business problems.
+                        Results-driven Full-Stack Software Developer with practical experience 
+                        building scalable web, mobile, and desktop applications using Laravel, 
+                        Spring Boot, React, Flutter, and JavaFX. Skilled in developing secure 
+                        backend APIs, optimizing database performance, and delivering reliable 
+                        systems that support real-world business operations.
+                    </p>
+                    <p className="resume-summary">
+                        Experience working on transportation, education, and business 
+                        management systems, improving operational efficiency and application 
+                        performance through optimized backend architecture and database queries.
+                         Demonstrated ability to collaborate in agile development teams, 
+                         coordinate feature implementation, and contribute to production-ready 
+                         deployments.
                     </p>
 
                     <div className="highlights-container">
                         <div className="highlight-item">
                             <span className="dot" />
                             <div className="highlight-text">
-                                <strong>5+ Years Experience</strong> in full-stack development across various industries.
+                                <strong>1+ Year Experience</strong> in high-performance full-stack 
+                                development and system optimization.
                             </div>
                         </div>
                         <div className="highlight-item">
                             <span className="dot" />
                             <div className="highlight-text">
-                                <strong>Architected</strong> and deployed multiple SaaS platforms from scratch.
+                                <strong>Graduated with Honors</strong> (GPA 3.74), ranking in the 
+                                Top 10% of the class.
                             </div>
                         </div>
                         <div className="highlight-item">
                             <span className="dot" />
                             <div className="highlight-text">
-                                <strong>Optimization Specialist</strong> reducing API latency by 40% in recent projects.
+                                <strong>Full-Stack Mastery</strong> across Laravel, Spring Boot, 
+                                React, and Flutter.
+                            </div>
+                        </div>
+                        <div className="highlight-item">
+                            <span className="dot" />
+                            <div className="highlight-text">
+                                <strong>Systems Specialist</strong> in transportation and business management solutions.
                             </div>
                         </div>
                     </div>
@@ -57,9 +75,9 @@ export function ResumeSection() {
                         technical skills and work history.
                     </p>
 
-                    <a href="/cv/Biniyam_Alemayehu_CV.pdf" download className="download-btn shadow-glow">
+                    <a href="/images/cv/BINIYAM ALEMAYEHU RESUME.pdf" target="_blank" rel="noopener noreferrer" className="download-btn shadow-glow">
                         <span className="btn-content">
-                            Download Resume (PDF)
+                            View Resume (PDF)
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="download-icon">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                 <polyline points="7 10 12 15 17 10" />

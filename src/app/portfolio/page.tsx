@@ -119,7 +119,11 @@ const projects = [
   {
     title: "Personal Portfolio",
     description: "Responsive portfolio website showcasing projects, skills, and professional experience with modern UI/UX.",
-    images: ["/images/Me.png", "/images/BG.png"],
+     images: [
+      "/images/myweb/mw1.png",
+      "/images/myweb/mw2.png",
+      "/images/myweb/mw3.png",
+    ],
     tags: ["React", "Tailwind", "CSS"],
     problem: "Needed a professional online presence to present projects and skills effectively.",
     solution: "Designed and developed a responsive portfolio website with modern UI/UX using React and Tailwind.",
