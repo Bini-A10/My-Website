@@ -98,7 +98,7 @@ export function SkillsSection() {
             <style jsx>{`
         .skills-section {
           width: 100%;
-          max-width: 1200px;
+          max-width: 1600px;
           margin-top: 0;
           padding: 0 1rem;
         }

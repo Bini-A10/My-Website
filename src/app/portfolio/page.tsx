@@ -240,7 +240,7 @@ export default function PortfolioPage() {
 
         .section-container {
             width: 100%;
-            max-width: 1300px;
+            max-width: 1600px;
             display: flex;
             flex-direction: column;
             align-items: center;

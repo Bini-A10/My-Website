@@ -179,7 +179,6 @@ export function ProjectCard({
           position: relative;
           padding: 0px 15px 0px 15px;
           width: 100%;
-          max-width: 700px;
         }
 
         .project-card:hover {
@@ -290,6 +289,8 @@ export function ProjectCard({
         .dot:hover {
           background: rgba(255, 255, 255, 0.8);
         }
+
+        .project-info {
           padding: 2rem;
           flex: 1;
           display: flex;
