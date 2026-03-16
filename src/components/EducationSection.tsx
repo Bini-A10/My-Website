@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const education = [
     {
         title: "BSc in Computer Science",
         institution: "Unity University",
-        date: "2021 - 2025",
-        description: "Graduated with Honors, ranking in the Top 10% of the class with a GPA of 3.74. Specialized in Software Engineering, Database Systems, and Full-Stack Development.",
+        date: "2021 – 2025",
+        description: "Graduated with Honors, ranking in the Top 10% of the class with a GPA of 3.74. Specialized in Software Engineering, Database Systems, and Full-Stack Development, building strong foundations in modern software development and system design.",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                 <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+        )
+    },
+    {
+        title: "Diploma in Electrical / Electronic Technology (Level IV)",
+        institution: "Adama Polytechnic College",
+        date: "2016 – 2020",
+        description: "Completed a Level IV Diploma in Electrical and Electronic Technology, focusing on electrical systems, electronics fundamentals, and technical troubleshooting. Successfully achieved the Center of Competence (COC) certification, validating professional technical skills.",
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
             </svg>
         )
     }
@@ -20,150 +32,196 @@ const certifications = [
         title: "BSc Degree in Computer Science",
         issuer: "Unity University",
         date: "2025",
-        file: "/images/certificates/1.Degree.pdf"
+        file: "/images/certificates/BSc Degree in Computer Science.pdf"
     },
     {
         title: "Academic Transcript",
         issuer: "Unity University",
         date: "2025",
-        file: "/images/certificates/2. Transcript.pdf"
+        file: "/images/certificates/Academic Transcript.pdf"
     },
     {
-        title: "Red Cross First Aid & CPR",
+        title: "TVET Level IV Qualification Certificate",
+        issuer: "Ministry of Science and Higher Education",
+        date: "2020",
+        file: "/images/certificates/TVET Level IV Qualification Certificate.pdf"
+    },
+    {
+        title: "Technical Level IV Certificate (COC)",
+        issuer: "Adama Polytechnic College",
+        date: "2020",
+        file: "/images/certificates/Technical Level IV Certificate (COC).pdf"
+    },
+    {
+        title: "TVET Level III Qualification Certificate",
+        issuer: "Ministry of Science and Higher Education",
+        date: "2019",
+        file: "/images/certificates/TVET Level III Qualification Certificate.pdf"
+    },
+    {
+        title: "Technical Level III Certificate (COC)",
+        issuer: "Adama Polytechnic College",
+        date: "2019",
+        file: "/images/certificates/Technical Level III Certificate (COC).pdf"
+    },
+    {
+        title: "TVET Level I & II Qualification",
+        issuer: "Ministry of Science and Higher Education",
+        date: "2018",
+        file: "/images/certificates/TVET Level I & II Qualification.pdf"
+    },
+    {
+        title: "Technical Level II Certificate (COC)",
+        issuer: "Adama Polytechnic College",
+        date: "2018",
+        file: "/images/certificates/Technical Level II Certificate (COC).pdf"
+    },
+    {
+        title: "Technical Level I Certificate (COC)",
+        issuer: "Adama Polytechnic College",
+        date: "2017",
+        file: "/images/certificates/Technical Level I Certificate (COC).pdf"
+    },
+    {
+        title: "Red Cross Volunteer",
         issuer: "Ethiopian Red Cross Society",
-        date: "2023",
-        file: "/images/certificates/3. Red Cross Certificate.pdf"
+        date: "2020",
+        file: "/images/certificates/Red Cross Volunteer.pdf"
     },
     {
-        title: "Managing Projects with Microsoft Project",
-        issuer: "The Open University (B810)",
-        date: "2024",
-        file: "/images/certificates/B810_1_statement.pdf"
+        title: "Managing Projects (B810)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Managing Projects (B810).pdf"
     },
     {
-        title: "Developing Concurrent Software",
-        issuer: "The Open University (D828)",
-        date: "2024",
-        file: "/images/certificates/D828_1_statement.pdf"
+        title: "Developing Concurrent Software (D828)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Developing Concurrent Software (D828).pdf"
     },
     {
-        title: "English for Academic Purposes",
-        issuer: "The Open University (ENG)",
-        date: "2024",
-        file: "/images/certificates/ENG_1_statement.pdf"
+        title: "English for Academic Purposes (ENG)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/English for Academic Purposes (ENG).pdf"
     },
     {
-        title: "Information Literacy",
-        issuer: "The Open University (INL)",
-        date: "2024",
-        file: "/images/certificates/INL_2_statement.pdf"
+        title: "Information Literacy (INL)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Information Literacy (INL).pdf"
     },
     {
-        title: "Object-oriented Programming with Java",
-        issuer: "The Open University (MOU)",
-        date: "2024",
-        file: "/images/certificates/MOU_1_statement.pdf"
+        title: "OOP with Java (MOU)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/OOP with Java (MOU).pdf"
     },
     {
-        title: "Software Coding & Development",
-        issuer: "The Open University (SCOD)",
-        date: "2024",
-        file: "/images/certificates/SCOD_1_statement.pdf"
+        title: "Software Coding & Development (SCOD)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Software Coding & Development (SCOD).pdf"
     },
     {
-        title: "Strategic Management",
-        issuer: "The Open University (SM380)",
-        date: "2024",
-        file: "/images/certificates/SM380_1_statement.pdf"
+        title: "Strategic Management (SM380)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Strategic Management (SM380).pdf"
     },
     {
-        title: "The Networked World",
-        issuer: "The Open University (T175)",
-        date: "2024",
-        file: "/images/certificates/T175_7_statement.pdf"
+        title: "The Networked World (T175)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/The Networked World (T175).pdf"
     },
     {
-        title: "Software Engineering Principles",
-        issuer: "The Open University (T823)",
-        date: "2024",
-        file: "/images/certificates/T823_1_statement.pdf"
+        title: "Software Engineering Principles (T823)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Software Engineering Principles (T823).pdf"
     },
     {
-        title: "Introduction to Computing & IT",
-        issuer: "The Open University (TM112)",
-        date: "2024",
-        file: "/images/certificates/TM112_1_statement.pdf"
+        title: "Introduction to Computing & IT (TM112)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Introduction to Computing & IT (TM112).pdf"
     },
     {
-        title: "Web Technologies",
-        issuer: "The Open University (TM255)",
-        date: "2024",
-        file: "/images/certificates/TM255_1_statement.pdf"
+        title: "Web Technologies (TM255)",
+        issuer: "The Open University",
+        date: "2025",
+        file: "/images/certificates/Web Technologies (TM255).pdf"
     }
 ];
 
 export function EducationSection() {
     return (
-        <section className="edu-section">
-            <div className="archive-header">
-                <div className="vertical-title">
-                    <span>ACCREDITATION</span>
-                    <span className="accent">ARCHIVE</span>
-                </div>
-            </div>
+        <section className="accreditation-archive">
+            <h2 className="section-title">ACCREDITATION ARCHIVE</h2>
 
-            <div className="edu-content-grid">
-                {/* Academic Journey */}
-                <div className="academic-column">
-                    <h3 className="column-label">Academic Journey</h3>
-                    <div className="edu-cards">
+            <div className="archive-grid">
+                {/* Left Column: Academic Journey */}
+                <div className="archive-column">
+                    <div className="column-header">
+                        <div className="header-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cat-icon">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3 className="column-title">ACADEMIC JOURNEY</h3>
+                    </div>
+
+                    <div className="academic-content">
                         {education.map((item, idx) => (
-                            <div key={idx} className="academic-card glass">
-                                <div className="card-top">
-                                    <span className="edu-icon">{item.icon}</span>
-                                    <span className="year-badge">{item.date}</span>
+                            <div key={idx} className="edu-item-card glass">
+                                <div className="edu-item-top">
+                                    <h4 className="edu-title">{item.title}</h4>
+                                    <span className="edu-date">{item.date}</span>
                                 </div>
-                                <h4>{item.title}</h4>
-                                <p className="school">{item.institution}</p>
-                                <p className="desc">{item.description}</p>
+                                <p className="edu-school">{item.institution}</p>
+                                <p className="edu-description">{item.description}</p>
+                                <div className="edu-badge">
+                                    <span className="dot"></span>
+                                    <span>Verified Academic Record</span>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Certifications Horizontal Scroll */}
-                <div className="certs-column">
-                    <div className="certs-header">
-                        <h3 className="column-label">Professional Certifications</h3>
-                        <div className="scroll-hint">
-                            <span>Scroll</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arrow">
-                                <line x1="5" y1="12" x2="19" y2="12" />
-                                <polyline points="12 5 19 12 12 19" />
+                {/* Right Column: Professional Certifications */}
+                <div className="archive-column">
+                    <div className="column-header">
+                        <div className="header-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cat-icon">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg>
                         </div>
+                        <h3 className="column-title">PROFESSIONAL CERTIFICATIONS</h3>
                     </div>
-                    
-                    <div className="horizontal-scroll-wrapper">
-                        <div className="certs-track">
+
+                    <div className="certs-scroll-area">
+                        <div className="certs-list">
                             {certifications.map((cert, idx) => (
-                                <a 
-                                    key={idx} 
-                                    href={cert.file} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="cert-card glass"
+                                <a
+                                    key={idx}
+                                    href={cert.file}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cert-mini-card glass"
                                 >
-                                    <div className="cert-status">
-                                        <span className="status-dot"></span>
-                                        VERIFIED DOCUMENT
+                                    <div className="cert-info">
+                                        <h4 className="cert-name">{cert.title}</h4>
+                                        <p className="cert-meta">{cert.issuer} • {cert.date}</p>
                                     </div>
-                                    <h4 className="cert-name">{cert.title}</h4>
-                                    <p className="cert-issuer">{cert.issuer}</p>
-                                    <div className="cert-footer">
-                                        <span className="cert-date">{cert.date}</span>
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="clip-icon">
-                                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                                    <div className="cert-action">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="open-icon">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
                                         </svg>
                                     </div>
                                 </a>
@@ -174,281 +232,249 @@ export function EducationSection() {
             </div>
 
             <style jsx>{`
-                .edu-section {
+                .accreditation-archive {
                     width: 100%;
-                    max-width: 1400px;
+                    max-width: 1200px;
                     margin: 8rem auto 0;
-                    padding: 0 2rem;
-                    display: grid;
-                    grid-template-columns: 120px 1fr;
-                    gap: 3rem;
+                    padding: 0 1rem;
                 }
 
-                .archive-header {
-                    border-right: 1px solid rgba(255, 255, 255, 0.1);
-                    padding-right: 2rem;
-                }
-
-                .vertical-title {
-                    writing-mode: vertical-rl;
-                    transform: rotate(180deg);
+                .section-title {
                     font-family: 'Ethnocentric', sans-serif;
-                    font-size: 2.5rem;
-                    color: rgba(255, 255, 255, 0.1);
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    text-transform: uppercase;
-                    height: 100%;
-                    white-space: nowrap;
-                }
-
-                .vertical-title .accent {
+                    font-size: 2rem;
                     color: var(--color-primary);
-                    opacity: 0.8;
-                }
-
-                .edu-content-grid {
-                    display: grid;
-                    grid-template-columns: 1fr 2.5fr;
-                    gap: 4rem;
-                    overflow: hidden;
-                }
-
-                .column-label {
-                    font-family: 'Gilroy-Black', sans-serif;
-                    font-size: 0.9rem;
+                    margin-bottom: 4rem;
+                    text-align: center;
                     text-transform: uppercase;
-                    letter-spacing: 3px;
-                    color: rgba(255, 255, 255, 0.4);
-                    margin-bottom: 2rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
+                    letter-spacing: 2px;
+                    text-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
                 }
 
-                .column-label::after {
-                    content: '';
-                    flex: 1;
-                    height: 1px;
-                    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
+                .archive-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3rem;
+                    align-items: start;
                 }
 
-                /* Academic Card */
-                .edu-cards {
+                .archive-column {
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
                 }
 
-                .academic-card {
-                    padding: 2rem;
+                .column-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.25rem;
+                    margin-bottom: 1rem;
+                }
+
+                .header-icon-container {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 0, 60, 0.1);
                     border-radius: 12px;
-                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    color: var(--color-primary);
+                    transition: all 0.3s ease;
+                }
+
+                .cat-icon {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+
+                .column-title {
+                    font-family: 'Gilroy-Black', sans-serif;
+                    font-size: 1.3rem;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    margin: 0;
+                }
+
+                /* Academic Card Style */
+                .edu-item-card {
+                    padding: 2.5rem;
+                    border-radius: var(--radius-lg);
                     transition: all 0.4s ease;
+                    border: 1px solid rgba(255, 255, 255, 0.05);
                 }
 
-                .academic-card:hover {
+                .edu-item-card:hover {
                     border-color: var(--color-primary);
-                    background: rgba(255, 0, 60, 0.03);
-                    transform: translateY(-5px);
+                    transform: translateY(-8px) scale(1.02);
+                    box-shadow: 0 10px 30px rgba(255, 0, 60, 0.15), var(--shadow-glow);
                 }
 
-                .card-top {
+                .edu-item-top {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 1.5rem;
+                    align-items: flex-start;
+                    margin-bottom: 1rem;
+                    gap: 1rem;
                 }
 
-                .edu-icon {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    color: var(--color-primary);
-                    opacity: 0.8;
+                .edu-title {
+                    font-family: 'Gilroy-Black', sans-serif;
+                    font-size: 1.4rem;
+                    color: white;
+                    margin: 0;
+                    text-transform: uppercase;
+                    line-height: 1.2;
                 }
 
-                .year-badge {
+                .edu-date {
                     font-family: var(--font-mono);
-                    font-size: 0.8rem;
+                    font-size: 0.85rem;
                     color: var(--color-primary);
                     background: rgba(255, 0, 60, 0.1);
                     padding: 0.4rem 1rem;
                     border-radius: 20px;
+                    flex-shrink: 0;
                 }
 
-                .academic-card h4 {
-                    font-family: 'Gilroy-Black', sans-serif;
-                    font-size: 1.25rem;
-                    color: white;
-                    margin: 0 0 0.5rem 0;
-                }
-
-                .school {
+                .edu-school {
                     color: var(--color-text-secondary);
                     font-weight: 600;
-                    margin: 0 0 1rem 0;
+                    margin-bottom: 1.5rem;
+                    font-size: 1.1rem;
                 }
 
-                .desc {
-                    font-size: 0.95rem;
+                .edu-description {
+                    font-size: 1rem;
                     color: rgba(255, 255, 255, 0.6);
-                    line-height: 1.6;
-                    margin: 0;
+                    line-height: 1.7;
+                    margin-bottom: 2rem;
                 }
 
-                /* Certs Horizontal Scroll */
-                .certs-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                }
-
-                .scroll-hint {
+                .edu-badge {
                     display: flex;
                     align-items: center;
-                    gap: 0.5rem;
-                    color: var(--color-primary);
+                    gap: 0.75rem;
                     font-family: 'Gilroy-Black', sans-serif;
-                    font-size: 0.7rem;
+                    font-size: 0.8rem;
                     text-transform: uppercase;
-                    letter-spacing: 1px;
-                }
-
-                .scroll-hint .arrow {
-                    width: 1rem;
-                    height: 1rem;
-                    animation: bounceRight 2s infinite;
-                }
-
-                @keyframes bounceRight {
-                    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
-                    40% {transform: translateX(5px);}
-                    60% {transform: translateX(3px);}
-                }
-
-                .horizontal-scroll-wrapper {
-                    overflow-x: auto;
-                    padding-bottom: 2rem;
-                    margin: 0 -1rem;
-                    scrollbar-width: none; /* Firefox */
-                }
-
-                .horizontal-scroll-wrapper::-webkit-scrollbar {
-                    display: none; /* Chrome/Safari */
-                }
-
-                .certs-track {
-                    display: flex;
-                    gap: 1.5rem;
-                    padding: 0 1rem;
-                }
-
-                .cert-card {
-                    flex: 0 0 300px;
-                    padding: 1.5rem;
-                    border-radius: 12px;
-                    border: 1px solid rgba(255, 255, 255, 0.05);
-                    text-decoration: none;
-                    transition: all 0.4s ease;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-
-                .cert-card:hover {
-                    border-color: var(--color-primary);
-                    background: rgba(255, 0, 60, 0.03);
-                    transform: translateY(-5px);
-                }
-
-                .cert-status {
-                    font-size: 0.65rem;
-                    font-family: 'Gilroy-Black', sans-serif;
                     letter-spacing: 1.5px;
-                    color: rgba(255, 255, 255, 0.5);
-                    display: flex;
-                    align-items: center;
-                    gap: 0.6rem;
+                    color: var(--color-primary);
                 }
 
-                .status-dot {
-                    width: 6px;
-                    height: 6px;
+                .edu-badge .dot {
+                    width: 8px;
+                    height: 8px;
                     background: var(--color-primary);
                     border-radius: 50%;
-                    box-shadow: 0 0 8px var(--color-primary);
+                    box-shadow: 0 0 10px var(--color-primary);
+                }
+
+                /* Certs Vertical Scroll Style */
+                .certs-scroll-area {
+                    max-height: 700px;
+                    overflow-y: auto;
+                    padding-right: 1.5rem;
+                    scrollbar-width: thin;
+                    scrollbar-color: var(--color-primary) transparent;
+                }
+
+                .certs-scroll-area::-webkit-scrollbar {
+                    width: 4px;
+                }
+
+                .certs-scroll-area::-webkit-scrollbar-thumb {
+                    background: var(--color-primary);
+                    border-radius: 10px;
+                }
+
+                .certs-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem;
+                }
+
+                .cert-mini-card {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    padding: 1.5rem 2rem;
+                    border-radius: 12px;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    text-decoration: none;
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                }
+
+                .cert-mini-card:hover {
+                    background: rgba(255, 0, 60, 0.05);
+                    border-color: rgba(255, 0, 60, 0.3);
+                    transform: translateX(12px);
+                    box-shadow: -5px 5px 20px rgba(255, 0, 60, 0.1);
                 }
 
                 .cert-name {
                     font-family: 'Gilroy-Black', sans-serif;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     color: white;
-                    margin: 0;
-                    line-height: 1.4;
-                    min-height: 2.8rem;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
+                    margin: 0 0 0.5rem 0;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    line-height: 1.3;
                 }
 
-                .cert-issuer {
-                    font-size: 0.85rem;
-                    color: var(--color-text-secondary);
+                .cert-meta {
+                    font-size: 0.9rem;
+                    color: rgba(255, 255, 255, 0.4);
                     margin: 0;
                 }
 
-                .cert-footer {
-                    margin-top: auto;
+                .cert-action {
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
-                    padding-top: 1rem;
-                    border-top: 1px solid rgba(255, 255, 255, 0.05);
-                }
-
-                .cert-date {
-                    font-family: var(--font-mono);
-                    font-size: 0.75rem;
+                    justify-content: center;
                     color: var(--color-primary);
-                }
-
-                .clip-icon {
-                    width: 1rem;
-                    height: 1rem;
-                    color: rgba(255, 255, 255, 0.2);
+                    opacity: 0.3;
                     transition: all 0.3s ease;
+                    margin-left: 1.5rem;
                 }
 
-                .cert-card:hover .clip-icon {
-                    color: var(--color-primary);
-                    transform: rotate(-15deg);
+                .cert-mini-card:hover .cert-action {
+                    opacity: 1;
+                    transform: scale(1.2);
                 }
 
-                @media (max-width: 1200px) {
-                    .edu-section {
+                .open-icon {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+
+                @media (max-width: 1024px) {
+                    .archive-grid {
                         grid-template-columns: 1fr;
+                        gap: 5rem;
                     }
-                    .archive-header {
-                        display: none;
-                    }
-                    .edu-content-grid {
-                        grid-template-columns: 1fr;
-                        gap: 4rem;
+                    .certs-scroll-area {
+                        max-height: none;
+                        padding-right: 0;
                     }
                 }
 
-                @media (max-width: 768px) {
-                    .edu-section {
+                @media (max-width: 640px) {
+                    .accreditation-archive {
                         margin-top: 5rem;
-                        padding: 0 1.5rem;
                     }
-                    .academic-card {
+                    .section-title {
+                        font-size: 1.5rem;
+                        margin-bottom: 3rem;
+                    }
+                    .edu-item-card {
                         padding: 1.5rem;
                     }
-                    .cert-card {
-                        flex: 0 0 260px;
+                    .cert-mini-card {
+                        padding: 1.25rem 1.5rem;
+                    }
+                    .cert-mini-card:hover {
+                        transform: translateY(-5px);
                     }
                 }
             `}</style>
