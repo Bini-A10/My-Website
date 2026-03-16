@@ -51,8 +51,7 @@ export function TestimonialsSection() {
         .testimonials-section {
           width: 100%;
           max-width: 1200px;
-          margin-top: 8rem;
-          margin-bottom: 8rem;
+          margin-top: 0;
           padding: 0 1rem;
         }
 

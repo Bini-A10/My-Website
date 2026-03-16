@@ -235,7 +235,7 @@ export function EducationSection() {
                 .accreditation-archive {
                     width: 100%;
                     max-width: 1200px;
-                    margin: 8rem auto 0;
+                    margin: 0 auto;
                     padding: 0 1rem;
                 }
 
