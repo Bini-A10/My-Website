@@ -84,7 +84,10 @@ export default function ContactPage() {
               <label htmlFor="message">Message</label>
               <textarea id="message" rows={5} placeholder="How can I help you?" required></textarea>
             </div>
-            <Button type="submit">Send Message</Button>
+            <Button type="submit" className="send-btn">
+              SEND MESSAGE 
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="send-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </Button>
           </form>
         </div>
       </section>
@@ -100,7 +103,7 @@ export default function ContactPage() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: var(--spacing-24) var(--spacing-8) var(--spacing-12);
+          padding: 10rem var(--spacing-8) var(--spacing-12);
         }
 
         .contact-section {
@@ -234,6 +237,45 @@ export default function ContactPage() {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
+        }
+
+        :global(.send-btn) {
+          position: relative;
+          padding: 1.25rem 2.5rem;
+          background: var(--color-primary);
+          color: white;
+          text-decoration: none;
+          border-radius: 8px;
+          font-family: 'Gilroy-Black', sans-serif !important;
+          font-size: 0.9rem !important;
+          text-transform: uppercase;
+          letter-spacing: 2px !important;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+          overflow: hidden;
+          width: 100%;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        :global(.send-btn:hover) {
+          transform: translateY(-5px) scale(1.02);
+          background: white !important;
+          color: var(--color-primary) !important;
+          box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 0, 60, 0.4) !important;
+        }
+
+        :global(.send-icon) {
+          width: 1.25rem;
+          height: 1.25rem;
+          transition: transform 0.3s ease;
+        }
+
+        :global(.send-btn:hover .send-icon) {
+          transform: translateX(5px) translateY(-5px) scale(1.1);
         }
 
         .form-group {
