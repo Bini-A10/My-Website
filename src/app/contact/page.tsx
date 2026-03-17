@@ -1,9 +1,52 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/Button";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+        setErrorMessage(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setStatus('error');
+      setErrorMessage('Failed to send message. Please check your connection.');
+    }
+  };
+
   return (
     <main className="contact-page-container">
       <section className="contact-section">
@@ -71,23 +114,58 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <form className="contact-form glass">
+          <form className="contact-form glass" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="Your Name" required />
+              <input 
+                type="text" 
+                id="name" 
+                placeholder="Your Name" 
+                required 
+                value={formData.name}
+                onChange={handleChange}
+                disabled={status === 'loading'}
+              />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="Your Email" required />
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Your Email" 
+                required 
+                value={formData.email}
+                onChange={handleChange}
+                disabled={status === 'loading'}
+              />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows={5} placeholder="How can I help you?" required></textarea>
+              <textarea 
+                id="message" 
+                rows={5} 
+                placeholder="How can I help you?" 
+                required
+                value={formData.message}
+                onChange={handleChange}
+                disabled={status === 'loading'}
+              ></textarea>
             </div>
-            <Button type="submit" className="send-btn">
-              SEND MESSAGE 
+            <Button 
+                type="submit" 
+                className="send-btn"
+                disabled={status === 'loading'}
+            >
+              {status === 'loading' ? 'SENDING...' : 'SEND MESSAGE'}
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="send-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </Button>
+            
+            {status === 'success' && (
+              <p className="status-message success">Message sent successfully! I'll get back to you soon.</p>
+            )}
+            {status === 'error' && (
+              <p className="status-message error">{errorMessage}</p>
+            )}
           </form>
         </div>
       </section>
@@ -343,6 +421,27 @@ export default function ContactPage() {
           .info-items {
             gap: 1.5rem;
           }
+        }
+
+        .status-message {
+          font-family: 'Gilroy-LightItalic', sans-serif;
+          font-size: 0.9rem;
+          margin-top: 1rem;
+          padding: 0.75rem;
+          border-radius: 8px;
+          text-align: center;
+        }
+
+        .status-message.success {
+          background: rgba(0, 255, 128, 0.1);
+          color: #00ff80;
+          border: 1px solid rgba(0, 255, 128, 0.2);
+        }
+
+        .status-message.error {
+          background: rgba(255, 0, 60, 0.1);
+          color: #ff003c;
+          border: 1px solid rgba(255, 0, 60, 0.2);
         }
       `}</style>
     </main>
