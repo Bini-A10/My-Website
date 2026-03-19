@@ -5,42 +5,53 @@ import React, { useState, useEffect } from 'react';
 
 const testimonials = [
     {
-        quote: "Biniyam is an exceptional developer who combines deep technical knowledge with a keen eye for user experience. His work on our inventory system was transformative.",
-        author: "Sarah Johnson",
-        role: "CTO, TechLogistics SaaS",
-        avatar: "SJ"
+        quote: "Biniyam demonstrated exceptional technical ability and professionalism during his time at Hawi Software Solutions. His contributions to several major systems and his strong problem-solving mindset made him a valuable member of our team. He is a fast learner who adapts quickly to new technologies and consistently shows leadership and initiative.",
+        author: "Hawi Feyissa",
+        role: "Owner & General Manager — Hawi Software Solutions",
+        avatar: "HF"
     },
     {
-        quote: "Reliable, proactive, and technically brilliant. He delivered our mobile app ahead of schedule and the code quality was top-notch. Highly recommended!",
-        author: "Alemayehu T.",
-        role: "Founder, EduPath Solutions",
-        avatar: "AT"
+        quote: "Working with Biniyam was always productive and inspiring. He quickly understands new requirements, adapts to changes, and delivers high-quality solutions. His leadership during team tasks and his ability to guide others make him someone every project team needs.",
+        author: "Zelalem Weldesenbet",
+        role: "Project Manager",
+        avatar: "Z"
     },
     {
-        quote: "One of the most talented full-stack engineers I've mentored. His ability to grasp complex architectures and implement them efficiently is rare.",
-        author: "David Chen",
-        role: "Senior Staff Engineer, Google",
-        avatar: "DC"
+        quote: "I studied and later worked with Biniyam, and I have always admired his dedication to learning and improvement. He is open to new ideas, learns technologies quickly, and naturally takes leadership roles when working in teams.",
+        author: "Kidus Asebe",
+        role: "University Classmate & Colleague",
+        avatar: "KA"
     },
     {
-        quote: "Biniyam is an exceptional developer who combines deep technical knowledge with a keen eye for user experience. His work on our inventory system was transformative.",
-        author: "Sarah Johnson",
-        role: "CTO, TechLogistics SaaS",
-        avatar: "SJ"
+        quote: "Working with Biniyam has been a great experience. As a senior developer, I had the opportunity to guide him on several technical tasks, and he always showed a strong willingness to learn. He quickly understands new concepts, asks thoughtful questions, and applies feedback effectively. His curiosity, teamwork, and determination make him a developer who grows very fast.",
+        author: "Khalid Yasin",
+        role: "Senior Software Developer — Teammate",
+        avatar: "K"
     },
     {
-        quote: "Reliable, proactive, and technically brilliant. He delivered our mobile app ahead of schedule and the code quality was top-notch. Highly recommended!",
-        author: "Alemayehu T.",
-        role: "Founder, EduPath Solutions",
-        avatar: "AT"
+        quote: "I had the chance to mentor Biniyam on different development tasks, and it was always rewarding to see how quickly he learns. He is open to new ideas, adapts to new technologies fast, and consistently improves his skills. His positive attitude and dedication make him a great person to teach and collaborate with.",
+        author: "Amanuel Legese",
+        role: "Senior Software Developer — Teammate",
+        avatar: "A"
     },
     {
-        quote: "One of the most talented full-stack engineers I've mentored. His ability to grasp complex architectures and implement them efficiently is rare.",
-        author: "David Chen",
-        role: "Senior Staff Engineer, Google",
-        avatar: "DC"
+        quote: "Biniyam combines strong technical skills with a proactive mindset. He is open to new ideas, quickly adapts to changes, and always encourages the team to build better solutions together.",
+        author: "Temesgen Sisay",
+        role: "Software Developer — Teammate",
+        avatar: "T"
+    },
+    {
+        quote: "Biniyam distinguished himself as one of the top students in his cohort and a natural leader. His ability to coordinate teams, motivate peers, and solve complex problems reflects a rare combination of technical competence and interpersonal excellence.",
+        author: "Abdu Mohammed",
+        role: "Head, Computer Science Department — Unity University",
+        avatar: "AM"
+    },
+    {
+        quote: "Biniyam consistently demonstrated outstanding academic performance, discipline, and leadership. His proactive approach to learning and his ability to guide team projects make him an excellent candidate for advanced opportunities.",
+        author: "Tomas Endalemaw",
+        role: "Lecturer — Unity University",
+        avatar: "TE"
     }
-    
 ];
 
 export function TestimonialsSection() {
